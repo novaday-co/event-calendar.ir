@@ -5,6 +5,7 @@
   "author": "Adem ilter <ademilter@gmail.com>",
   "private": true,
   "scripts": {
+    "deploy": "node ./node_modules/vue-gh-pages/index.js",
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "yarn run dev",
     "test": "echo 'No tests.'; exit 0;",
@@ -70,6 +71,7 @@
     "surge": "^0.19.0",
     "url-loader": "^0.5.8",
     "vue-cli-plugin-vuetify": "~2.4.2",
+    "vue-gh-pages": "^1.19.1",
     "vue-loader": "^13.3.0",
     "vue-style-loader": "^3.0.1",
     "vue-template-compiler": "^2.5.2",
@@ -86,5 +88,6 @@
     "> 1%",
     "last 1 versions",
     "not ie <= 8"
-  ]
+  ],
+"homepage": "https://github.com/novaday-co/event-calendar.ir"
 }

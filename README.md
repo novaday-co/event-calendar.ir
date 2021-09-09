@@ -14,4 +14,7 @@ npm run build
 
 # build for production and view the bundle analyzer report
 npm run build --report
+
+# deploy project on github page
+npm run deploy
 ```
