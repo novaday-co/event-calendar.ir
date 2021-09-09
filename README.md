@@ -1,6 +1,6 @@
 # Event Calendar documentation website
 
-## Build Setup
+## Build
 
 ``` bash
 # install dependencies
