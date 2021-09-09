@@ -5,7 +5,7 @@
   "author": "Adem ilter <ademilter@gmail.com>",
   "private": true,
   "scripts": {
-    "deploy": "node ./node_modules/vue-gh-pages/index.js",
+    "deploy": "node ./node_modules/vue-gh-pages/index.js -b gh-pages",
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "yarn run dev",
     "test": "echo 'No tests.'; exit 0;",
