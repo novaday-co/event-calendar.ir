@@ -21,6 +21,24 @@
 
       <v-divider></v-divider>
 
+  <v-treeview
+    v-model="tree"
+    :open="initiallyOpen"
+    :items="items"
+    activatable
+    item-key="name"
+    open-on-click
+  >
+    <template v-slot:prepend="{ item, open }">
+      <v-icon v-if="!item.file">
+        {{ open ? 'mdi-folder-open' : 'mdi-folder' }}
+      </v-icon>
+      <v-icon v-else>
+        {{ files[item.file] }}
+      </v-icon>
+    </template>
+  </v-treeview>
+
     </v-navigation-drawer>
 
     <v-main>
@@ -54,6 +72,54 @@
         app: this
       }
       this.$store.commit('i18n/LANG_CHANGE', payload, { root: true })
-    }
+    },
+    data: () => ({
+      initiallyOpen: ['public'],
+      files: {
+        html: 'mdi-language-html5',
+        js: 'mdi-nodejs',
+        json: 'mdi-code-json',
+        md: 'mdi-language-markdown',
+        pdf: 'mdi-file-pdf',
+        png: 'mdi-file-image',
+        txt: 'mdi-file-document-outline',
+        xls: 'mdi-file-excel',
+      },
+      tree: [],
+      items: [
+        {
+          name: 'Introduction',
+          file: 'txt'
+        },
+        {
+          name: 'Getting started',
+          file: 'txt'
+        },
+        {
+          name: 'Options',
+          children: [
+            {
+              name: 'static',
+              children: [{
+                name: 'logo.png',
+                file: 'png'
+              }],
+            },
+            {
+              name: 'favicon.ico',
+              file: 'png'
+            },
+            {
+              name: 'index.html',
+              file: 'html'
+            },
+          ],
+        },
+        {
+          name: 'About',
+          file: 'txt',
+        }
+      ],
+    })
   }
 </script>
