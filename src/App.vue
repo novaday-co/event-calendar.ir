@@ -59,7 +59,7 @@
   export default {
     name: 'App',
     components: {
-
+      //
     },
     computed: {
       ...mapGetters('i18n', [
@@ -75,6 +75,7 @@
     },
     data: () => ({
       initiallyOpen: ['public'],
+      drawer: true,
       files: {
         html: 'mdi-language-html5',
         js: 'mdi-nodejs',
@@ -104,10 +105,6 @@
                 name: 'logo.png',
                 file: 'png'
               }],
-            },
-            {
-              name: 'favicon.ico',
-              file: 'png'
             },
             {
               name: 'index.html',
