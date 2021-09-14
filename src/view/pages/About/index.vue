@@ -1,9 +1,9 @@
-<i18n src="./i18n/index.json"></i18n>
-
-<template lang="pug">
-  .Home
-    h1.title {{ $t('title') }}
-
+<template>
+  <div id="Home">
+    <h1>
+      this is About content
+    </h1>
+  </div>
 </template>
 
 <script>
@@ -12,7 +12,7 @@
   }
 </script>
 
-<style lang="scss">
+<style>
   .Home {
     padding: 50px;
   }
