@@ -84,7 +84,7 @@
         pdf: 'mdi-file-pdf',
         png: 'mdi-file-image',
         txt: 'mdi-file-document-outline',
-        xls: 'mdi-file-excel',
+        xls: 'mdi-file-excel'
       },
       tree: [],
       items: [
@@ -104,19 +104,19 @@
               children: [{
                 name: 'logo.png',
                 file: 'png'
-              }],
+              }]
             },
             {
               name: 'index.html',
               file: 'html'
-            },
-          ],
+            }
+          ]
         },
         {
           name: 'About',
-          file: 'txt',
+          file: 'txt'
         }
-      ],
+      ]
     })
   }
 </script>
