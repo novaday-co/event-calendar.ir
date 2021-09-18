@@ -13,34 +13,30 @@
     </div>
 
     <div>
-      <vue-code-highlight language="dart">
-        <pre class="language-dart mb-0 py-2">dependencies: 
+      <vue-code-highlight language="javascript">
+        <pre class="mb-0 py-2">dependencies: 
           flutter_event_calendar: ^0.0.8 </pre>
       </vue-code-highlight>
     </div>
     <p>Then You can install packages from the command line:</p>
     <div>
-      <vue-code-highlight language="dart">
-        <pre class="language-dart mb-0 py-2">$ pub get</pre>
+      <vue-code-highlight language="javascript">
+        <pre class="mb-0 py-2">$ pub get</pre>
       </vue-code-highlight>
     </div>
     <p>or</p>
     <div>
-      <vue-code-highlight language="dart">
-        <pre class="language-dart mb-0 py-2">$ flutter pub get</pre>
+      <vue-code-highlight language="javascript">
+        <pre class="mb-0 py-2">$ flutter pub get</pre>
       </vue-code-highlight>
     </div>
     <p>Alternatively, your editor might support flutter pub get. Check the docs for your editor to learn more.
       Now in your Dart code, you can use:</p>
     <div>
       <vue-code-highlight language="dart">
-        <pre class="language-dart mb-0 py-2">import 'package:flutter_event_calendar/flutter_event_calendar.dart';</pre>
+        <pre class="mb-0 py-2">import 'package:flutter_event_calendar/flutter_event_calendar.dart';</pre>
       </vue-code-highlight>
     </div>
-    <!-- <code> this is a line of code </code>
-    <code>> this is a line of code </code>
-    <code>> this is a line of code </code>
-    <code>> this is a line of code </code>  -->
     <img
      src="../../../assets/images/event_calendar_options.png"
      alt="event_calendar_options"
@@ -51,9 +47,12 @@
 </template>
 
 <script>
-import VueCodeHighlight from 'vue-code-highlight/src/CodeHighlight.vue'
+import { component as VueCodeHighlight } from 'vue-code-highlight'
 import 'vue-code-highlight/themes/duotone-sea.css'
 import 'vue-code-highlight/themes/window.css'
+import 'prism-es6/components/prism-markup-templating'
+import 'prism-es6/components/prism-dart'
+
   export default {
     name: 'home',
     components:{
