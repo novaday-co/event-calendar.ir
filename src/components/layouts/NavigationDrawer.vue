@@ -47,39 +47,99 @@ export default {
       tree: [],
       items: [
         {
-          name: 'Introduction',
-          file: 'txt',
-          to: '/'
-        },
-        {
           name: 'Getting started',
-          file: 'txt',
-          to: '/'
+          children: [
+            {
+              name: 'Introduction',
+              file:'',
+              to :'/',
+            },
+            {
+              name: 'License',
+              file:'',
+              to :'/',
+            },
+            {
+              name: 'Quick start',
+              file:'',
+              to :'/',
+            },
+            {
+              name: 'Change log',
+              file:'',
+              to :'/',
+            },
+            {
+              name: 'Support',
+              file:'',
+              to :'/',
+            }
+          ]
         },
         {
           name: 'Options',
           children: [
             {
-              name: 'static',
-              children: [
-                {
-                  name: 'logo.png',
-                  file: 'png',
-                  to: '/'
-                }
-              ]
+              name: 'Basics',
+              file: '',
+              to:'/',
             },
             {
-              name: 'index.html',
-              file: 'html',
-              to: '/'
+              name: 'Calendar',
+              file: '',
+              to:'/',
+            },
+            {
+              name: 'Month',
+              file: '',
+              to:'/',
+            },
+            {
+              name: 'Day',
+              file: '',
+              to:'/',
+            },
+            {
+              name: 'Event',
+              file: '',
+              to:'/',
+            },
+            {
+              name: 'Disabled days',
+              file: '',
+              to:'/',
+            },
+            {
+              name: 'Enabled days',
+              file: '',
+              to:'/',
+            },
+            {
+              name: 'Colorized days',
+              file: '',
+              to:'/',
+            },
+          ]
+        }, 
+        {
+          name: 'Contributing',
+          children : [
+            {
+              name: 'Architecture',
+              file: '',
+              to: '/about'
+            },
+            {
+              name: 'Calendar type',
+              file: '',
+              to: '/about'
+            },
+            {
+              name: 'Language',
+              file: '',
+              to: '/about'
             }
           ]
-        },
-        {
-          name: 'About',
-          file: 'txt',
-          to: '/about'
         }
       ]
     }

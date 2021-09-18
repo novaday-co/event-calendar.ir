@@ -4,6 +4,7 @@ import Router from 'vue-router'
 // Pages
 import Home from '@/view/pages/Home/route'
 import About from '@/view/pages/About/route'
+// import Contributing from '@/view/pages/Contributing/route'
 
 Vue.use(Router)
 
