@@ -80,4 +80,9 @@
       width : fit-content;
     }
   }
+  @media only screen and (max-width : 1240px ) {
+    img{
+      width : 100% ;
+    }
+  }
 </style>
