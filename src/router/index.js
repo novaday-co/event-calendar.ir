@@ -19,7 +19,6 @@ import ColorizedDays from '@/view/pages/ColorizedDays/route'
 import CalendarType from '@/view/pages/CalendarType/route'
 import Language from '@/view/pages/Language/route'
 
-
 Vue.use(Router)
 
 const router = new Router({

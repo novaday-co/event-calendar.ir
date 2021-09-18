@@ -56,23 +56,23 @@ export default {
             },
             {
               name: 'License',
-              file:'',
-              to :'/license',
+              file: '',
+              to: '/license'
             },
             {
               name: 'Quick start',
-              file:'',
-              to :'/quickStart',
+              file: '',
+              to: '/quickStart'
             },
             {
               name: 'Change log',
-              file:'',
-              to :'/changeLog',
+              file: '',
+              to: '/changeLog'
             },
             {
               name: 'Support',
-              file:'',
-              to :'/support',
+              file: '',
+              to: '/support'
             }
           ]
         },
@@ -87,38 +87,38 @@ export default {
             {
               name: 'Calendar',
               file: '',
-              to:'/calendar',
+              to: '/calendar'
             },
             {
               name: 'Month',
               file: '',
-              to:'/month',
+              to: '/month'
             },
             {
               name: 'Day',
               file: '',
-              to:'/day',
+              to: '/day'
             },
             {
               name: 'Event',
               file: '',
-              to:'/event',
+              to: '/event'
             },
             {
               name: 'Disabled days',
               file: '',
-              to:'/disabledDays',
+              to: '/disabledDays'
             },
             {
               name: 'Enabled days',
               file: '',
-              to:'/enabledDays',
+              to: '/enabledDays'
             },
             {
               name: 'Colorized days',
               file: '',
-              to:'/colorizedDays',
-            },
+              to: '/colorizedDays'
+            }
           ]
         },
         {
