@@ -13,20 +13,20 @@
     </div>
 
     <div>
-      <vue-code-highlight language="javascript">
+      <vue-code-highlight language="dart">
         <pre class="mb-0 py-2">dependencies: 
           flutter_event_calendar: ^0.0.8 </pre>
       </vue-code-highlight>
     </div>
     <p>Then You can install packages from the command line:</p>
     <div>
-      <vue-code-highlight language="javascript">
+      <vue-code-highlight language="dart">
         <pre class="mb-0 py-2">$ pub get</pre>
       </vue-code-highlight>
     </div>
     <p>or</p>
     <div>
-      <vue-code-highlight language="javascript">
+      <vue-code-highlight language="dart">
         <pre class="mb-0 py-2">$ flutter pub get</pre>
       </vue-code-highlight>
     </div>
@@ -48,9 +48,7 @@
 
 <script>
 import { component as VueCodeHighlight } from 'vue-code-highlight'
-import 'vue-code-highlight/themes/duotone-sea.css'
-import 'vue-code-highlight/themes/window.css'
-import 'prism-es6/components/prism-markup-templating'
+import 'vue-code-highlight/themes/prism-tomorrow.css'
 import 'prism-es6/components/prism-dart'
 
 export default {
@@ -84,6 +82,11 @@ export default {
   .calendar_image-width {
     max-width: 100%;
   }
+
+  .language-dart {
+    border-radius: 5px; 
+  }
+  
   @media only screen and (max-width : 1240px ) {
     img{
       width : 100% ;
