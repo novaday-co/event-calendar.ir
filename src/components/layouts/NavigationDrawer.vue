@@ -51,8 +51,8 @@ export default {
           children: [
             {
               name: 'Introduction',
-              file:'',
-              to :'/',
+              file: '',
+              to: '/'
             },
             {
               name: 'License',
@@ -82,7 +82,7 @@ export default {
             {
               name: 'Basics',
               file: '',
-              to:'/basics',
+              to: '/'
             },
             {
               name: 'Calendar',
@@ -120,10 +120,10 @@ export default {
               to:'/colorizedDays',
             },
           ]
-        }, 
+        },
         {
           name: 'Contributing',
-          children : [
+          children: [
             {
               name: 'Architecture',
               file: '',
