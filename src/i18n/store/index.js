@@ -1,9 +1,9 @@
 export default {
   namespaced: true,
   state: {
-    langDefault: localStorage.lang,
-    langFallback: 'tr',
-    langSupport: ['tr', 'en']
+    langDefault: window.localStorage.lang,
+    langFallback: 'en',
+    langSupport: ['en']
   },
   getters: {
     langDefault: state => {
@@ -18,7 +18,7 @@ export default {
   mutations: {
     LANG_CHANGE (state, { lang, app }) {
       state.langDefault = lang
-      localStorage.setItem('lang', lang)
+      window.localStorage.setItem('lang', lang)
       app.$root.$i18n.locale = lang
       app.$root.$validator.localize(lang)
     }
