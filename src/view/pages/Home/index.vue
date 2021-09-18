@@ -85,4 +85,9 @@ import 'vue-code-highlight/themes/window.css'
   .calendar_image-width {
     max-width: 100%;
   }
+  @media only screen and (max-width : 1240px ) {
+    img{
+      width : 100% ;
+    }
+  }
 </style>
