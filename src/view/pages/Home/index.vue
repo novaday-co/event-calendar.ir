@@ -53,12 +53,12 @@ import 'vue-code-highlight/themes/window.css'
 import 'prism-es6/components/prism-markup-templating'
 import 'prism-es6/components/prism-dart'
 
-  export default {
-    name: 'home',
-    components:{
-      VueCodeHighlight
-    }
+export default {
+  name: 'home',
+  components: {
+    VueCodeHighlight
   }
+}
 </script>
 <style scope>
   #introduction{

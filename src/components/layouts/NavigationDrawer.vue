@@ -51,28 +51,28 @@ export default {
           children: [
             {
               name: 'Introduction',
-              file:'',
-              to :'/',
+              file: '',
+              to: '/'
             },
             {
               name: 'License',
-              file:'',
-              to :'/',
+              file: '',
+              to: '/'
             },
             {
               name: 'Quick start',
-              file:'',
-              to :'/',
+              file: '',
+              to: '/'
             },
             {
               name: 'Change log',
-              file:'',
-              to :'/',
+              file: '',
+              to: '/'
             },
             {
               name: 'Support',
-              file:'',
-              to :'/',
+              file: '',
+              to: '/'
             }
           ]
         },
@@ -82,48 +82,48 @@ export default {
             {
               name: 'Basics',
               file: '',
-              to:'/',
+              to: '/'
             },
             {
               name: 'Calendar',
               file: '',
-              to:'/',
+              to: '/'
             },
             {
               name: 'Month',
               file: '',
-              to:'/',
+              to: '/'
             },
             {
               name: 'Day',
               file: '',
-              to:'/',
+              to: '/'
             },
             {
               name: 'Event',
               file: '',
-              to:'/',
+              to: '/'
             },
             {
               name: 'Disabled days',
               file: '',
-              to:'/',
+              to: '/'
             },
             {
               name: 'Enabled days',
               file: '',
-              to:'/',
+              to: '/'
             },
             {
               name: 'Colorized days',
               file: '',
-              to:'/',
-            },
+              to: '/'
+            }
           ]
-        }, 
+        },
         {
           name: 'Contributing',
-          children : [
+          children: [
             {
               name: 'Architecture',
               file: '',
@@ -148,7 +148,7 @@ export default {
 </script>
 
 <style scoped>
-    a {
-        text-decoration: none;
-    }
+  a {
+      text-decoration: none;
+  }
 </style>
