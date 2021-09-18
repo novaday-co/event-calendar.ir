@@ -57,22 +57,22 @@ export default {
             {
               name: 'License',
               file:'',
-              to :'/',
+              to :'/license',
             },
             {
               name: 'Quick start',
               file:'',
-              to :'/',
+              to :'/quickStart',
             },
             {
               name: 'Change log',
               file:'',
-              to :'/',
+              to :'/changeLog',
             },
             {
               name: 'Support',
               file:'',
-              to :'/',
+              to :'/support',
             }
           ]
         },
@@ -82,42 +82,42 @@ export default {
             {
               name: 'Basics',
               file: '',
-              to:'/',
+              to:'/basics',
             },
             {
               name: 'Calendar',
               file: '',
-              to:'/',
+              to:'/calendar',
             },
             {
               name: 'Month',
               file: '',
-              to:'/',
+              to:'/month',
             },
             {
               name: 'Day',
               file: '',
-              to:'/',
+              to:'/day',
             },
             {
               name: 'Event',
               file: '',
-              to:'/',
+              to:'/event',
             },
             {
               name: 'Disabled days',
               file: '',
-              to:'/',
+              to:'/disabledDays',
             },
             {
               name: 'Enabled days',
               file: '',
-              to:'/',
+              to:'/enabledDays',
             },
             {
               name: 'Colorized days',
               file: '',
-              to:'/',
+              to:'/colorizedDays',
             },
           ]
         }, 
@@ -127,17 +127,17 @@ export default {
             {
               name: 'Architecture',
               file: '',
-              to: '/about'
+              to: '/architecture'
             },
             {
               name: 'Calendar type',
               file: '',
-              to: '/about'
+              to: '/calendarType'
             },
             {
               name: 'Language',
               file: '',
-              to: '/about'
+              to: '/language'
             }
           ]
         }
@@ -148,7 +148,7 @@ export default {
 </script>
 
 <style scoped>
-    a {
-        text-decoration: none;
-    }
+  a {
+    text-decoration: none;
+  }
 </style>
