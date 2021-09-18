@@ -18,6 +18,7 @@
     "moment": "^2.20.1",
     "vee-validate": "^2.0.3",
     "vue": "^2.5.13",
+    "vue-code-highlight": "^0.7.8",
     "vue-i18n": "^7.4.2",
     "vue-router": "^3.0.1",
     "vue-the-mask": "^0.11.1",

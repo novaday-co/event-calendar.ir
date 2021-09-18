@@ -2,7 +2,8 @@
   <div>
     <img
       src="../../../assets/images/flutter_event_calendar.png" 
-      alt=""
+      alt="flutter_event_calendar"
+      class="calendar_image-width"
     >
     <div id="introduction">
       <h1>Event Calendar</h1>
@@ -11,22 +12,30 @@
       <p>Add this to your package's pubspec.yaml file:</p>
     </div>
 
-    <div class="code" id="long-div">
-      <pre class="mb-0 py-2">dependencies: 
-    flutter_event_calendar: ^0.0.8 </pre>
+    <div>
+      <vue-code-highlight language="dart">
+        <pre class="language-dart mb-0 py-2">dependencies: 
+          flutter_event_calendar: ^0.0.8 </pre>
+      </vue-code-highlight>
     </div>
     <p>Then You can install packages from the command line:</p>
-    <div class="code">
-      <pre class="mb-0 py-2">$ pub get</pre>
+    <div>
+      <vue-code-highlight language="dart">
+        <pre class="language-dart mb-0 py-2">$ pub get</pre>
+      </vue-code-highlight>
     </div>
     <p>or</p>
-    <div class="code">
-      <pre class="mb-0 py-2">$ flutter pub get</pre>
+    <div>
+      <vue-code-highlight language="dart">
+        <pre class="language-dart mb-0 py-2">$ flutter pub get</pre>
+      </vue-code-highlight>
     </div>
     <p>Alternatively, your editor might support flutter pub get. Check the docs for your editor to learn more.
       Now in your Dart code, you can use:</p>
-    <div class="code" id="long-div">
-      <p class="mb-0 py-2">import 'package:flutter_event_calendar/flutter_event_calendar.dart';</p>
+    <div>
+      <vue-code-highlight language="dart">
+        <pre class="language-dart mb-0 py-2">import 'package:flutter_event_calendar/flutter_event_calendar.dart';</pre>
+      </vue-code-highlight>
     </div>
     <!-- <code> this is a line of code </code>
     <code>> this is a line of code </code>
@@ -34,14 +43,22 @@
     <code>> this is a line of code </code>  -->
     <img
      src="../../../assets/images/event_calendar_options.png"
-     alt="">
+     alt="event_calendar_options"
+     class="calendar_image-width"
+    >
     
   </div>
 </template>
 
 <script>
+import VueCodeHighlight from 'vue-code-highlight/src/CodeHighlight.vue'
+import 'vue-code-highlight/themes/duotone-sea.css'
+import 'vue-code-highlight/themes/window.css'
   export default {
-    name: 'home'
+    name: 'home',
+    components:{
+      VueCodeHighlight
+    }
   }
 </script>
 <style scope>
@@ -61,23 +78,11 @@
     padding-bottom: 3px;
   }
 
-  .code{
-    font-size: 15px;
-    background-color: #f3f3f3;
-    box-shadow: 3px 3px 6px #e1e1e1;
-    border-radius: 2px;
-    padding: 10px;
-    font-family: monospace;
-    margin: 20px 0;
-  }
-
   p{
     margin-top: 16px;
   }
 
-  @media only screen and (max-width : 820px) {
-    #long-div{
-      width : fit-content;
-    }
+  .calendar_image-width {
+    max-width: 100%;
   }
 </style>
