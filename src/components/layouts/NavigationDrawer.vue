@@ -82,7 +82,7 @@ export default {
             {
               name: 'Basics',
               file: '',
-              to: '/'
+              to: '/basics'
             },
             {
               name: 'Calendar',
