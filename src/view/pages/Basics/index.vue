@@ -1,26 +1,42 @@
 <template>
   <div id="Basics">
-
     <h1>
       Basics
     </h1>
+    <h2 class="subtitle">
+      Calendar Type
+      <v-divider></v-divider>
+    </h2>
     <v-container>
-      <button v-scroll-to="'#element'">
-         Scroll to #element
-      </button>
-      <v-row class="justify-space-around">
+      <try-option
+        :description="description"
+        :images="images"
+        :array="array"
+        :scrollDescription="scrollDescription"
+      />
+      <!-- <v-row class="justify-space-around">
         <v-col cols="12" md="8">
-          <h2>
-            Calender Type
-            <v-divider></v-divider>
-          </h2>
-          <v-radio-group v-model="radioGroup" class="radioButton" row>
-            <v-radio
-              v-for="item in array"
-              :key="item.name"
-              :label="item.name"
-            ></v-radio>
-          </v-radio-group>
+          <button v-scroll-to="'#viewtype'">
+            Scroll to view type
+          </button>
+          <p class="paragraph">
+            Type of the calendar can be changed between <b>Jalali</b> and
+            <b> Gregorian </b>:
+          </p>
+            <v-row class="align-items-center">
+              <v-col cols="4">
+                <p>Try it now:</p>
+              </v-col>
+              <v-col cols="8">
+                <v-radio-group v-model="radioGroup" class="radioButton mt-0" row>
+                  <v-radio
+                    v-for="item in array"
+                    :key="item.name"
+                    :label="item.name"
+                  ></v-radio>
+                </v-radio-group>
+              </v-col>
+            </v-row>
         </v-col>
         <v-col cols="12" md="4">
           <v-container>
@@ -44,18 +60,23 @@
             />
           </v-container>
         </v-col>
-      </v-row>
-
-      <v-row class="justify-space-around" id="element">
-        
+      </v-row> -->
+      <try-option
+        :description="description2"
+        :images="images2"
+        :array="fields"
+        :scrollDescription="scrollDescription1"
+      />
+      <!-- <v-row class="justify-space-around" id="viewtype">
         <v-col cols="12" md="8">
           <h2>
-            View Type 
+            View Type
             <v-divider></v-divider>
           </h2>
-          <button v-scroll-to="'#element1'">
-            Scroll to #element1
-          </button>
+          <p class="paragraph">
+            View type of the calendar can be changed between <b>Daily</b> and
+            <b> Monthly </b>:
+          </p>
           <v-radio-group v-model="radioGroup" class="radioButton" row>
             <v-radio
               v-for="item in field"
@@ -86,12 +107,12 @@
             />
           </v-container>
         </v-col>
-      </v-row>
+      </v-row> -->
 
       <!-- <v-row class="justify-space-around" id="element1">
         <v-col cols="12" md="8">
           <h2>
-            Calender Type
+            calendar Type
             <v-divider></v-divider>
           </h2>
           <v-radio-group v-model="radioGroup" class="radioButton" row>
@@ -130,16 +151,29 @@
 </template>
 
 <script>
+import TryOption from '../../../components/TryOptions.vue'
 export default {
   name: "Basics",
-
+  components: {
+    TryOption
+  },
   data() {
     return {
       array: [{ name: "Jalali" }, { name: "Gregorian" }],
-      field:[{ name: "daily" }, { name: "monthly"}],
-      
-      radioGroup: 0,
-      switch1: true
+      description: "Type of the calendar can be changed between <b>Jalali</b> and<b> Gregorian </b>:",
+      images: [
+        "/../assets/images/screenshout1.jpg",
+        "/../assets/images/screenshout2.jpg"
+      ],
+      scrollDescription :"Scroll to View Type",
+      // switch1: true,
+      fields: [{ name: "Daily" }, { name: "Monthly" }],
+      description2 : "View type of the calendar can be changed between <b>Daily</b> and<b> Monthly </b>",
+      images2:[
+        "/../assets/images/screenshout1.jpg",
+        "/../assets/images/screenshout2.jpg"
+      ],
+      scrollDescription1 :"Scroll to next element"
     };
   }
 };
@@ -151,7 +185,7 @@ export default {
 }
 .calendar_image-width {
   float: right;
-  /* max-width: 100%; */
+
 }
 
 h1 {
@@ -163,10 +197,6 @@ h1 {
   flex-direction: column;
 }
 
-p {
-  width: 500px;
-}
-
 img {
   height: auto;
   width: 280px;
@@ -176,4 +206,18 @@ img {
 .radioButton {
   display: inline-block;
 }
+
+.v-application p {
+  margin-bottom: 30px !important;
+}
+
+.paragraph {
+  margin: 30px 0px 40px 10px;
+}
+
+button{
+  float: right;
+  padding: 20px;
+}
+
 </style>
