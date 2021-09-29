@@ -102,8 +102,8 @@ import TryOption from "../../../components/TryOptions.vue";
 
 
       images1: [
-        "/../assets/images/screenshout1.jpg",
-        "/../assets/images/screenshout2.jpg"
+        "src/assets/images/screenshout1.jpg",
+        "src/assets/images/screenshout2.jpg"
       ],
       scrollDescription1: "Scroll to next element",
       title1 : {name:"Empty text" , description :"String"},

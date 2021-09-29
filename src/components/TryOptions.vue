@@ -1,10 +1,10 @@
 <template>
   <div>
-      <v-row>
-      <h2 class="title">{{title.name}}</h2>
-      <p v-if="title.description" class="notes">: {{title.description}} </p>
-      </v-row>
-      <v-divider></v-divider>
+    <v-row>
+      <h2 class="title">{{ title.name }}</h2>
+      <p v-if="title.description" class="notes">: {{ title.description }}</p>
+    </v-row>
+    <v-divider></v-divider>
     <v-row class="justify-space-around">
       <v-col cols="12" md="8">
         <button v-scroll-to="'#viewtype'">
@@ -12,7 +12,7 @@
         </button>
         <p class="paragraph" v-html="description" />
         <v-row class="align-items-center">
-          <v-col cols="4" v-if="type !== 'none'">
+          <v-col cols="2" v-if="type !== 'none'">
             <p>Try it now:</p>
           </v-col>
 
@@ -28,9 +28,7 @@
 
           <v-col v-else-if="type === 'switch'">
             <v-container class="px-0" fluid>
-              <v-switch
-                v-model="switchButton"
-              ></v-switch>
+              <v-switch v-model="switchButton"></v-switch>
             </v-container>
           </v-col>
         </v-row>
@@ -92,11 +90,11 @@ export default {
         return "radio";
       }
     },
-    title:{
-        type: Object,
-        default: () =>{
-            return {}
-        }
+    title: {
+      type: Object,
+      default: () => {
+        return {};
+      }
     }
   },
   data() {
@@ -118,28 +116,36 @@ h1 {
   flex-direction: column;
 }
 
+img {
+  height: auto;
+  width: 280px;
+  object-fit: scale-down;
+}
+
 .radioButton {
   display: inline-block;
 }
 
-.v-application p {
+/* .v-application p {
   margin-bottom: 30px !important;
-}
-
-.paragraph {
-  margin: 30px 
-}
-
-.notes{
-    margin: 13px 0px 0px 9px;
-    font-size: 15px;
-}
-
-.title{
-    margin: 7px 2px;
-}
-
-/* .application .title {
-    line-height: 2.5rem !important;
 } */
+.paragraph[data-v-36123513] {
+  margin: 0px !important;
+}
+.paragraph {
+  margin: 30px;
+}
+
+.row{
+  margin: 12px;
+}
+
+.notes {
+  margin: 13px 0px 0px 9px;
+  font-size: 15px;
+}
+
+.title {
+  margin: 7px 2px 0px;
+}
 </style>

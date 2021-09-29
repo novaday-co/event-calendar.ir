@@ -48,8 +48,8 @@ export default {
       description2:
         "Will allow user to change view type directly in runtime:",
       images2: [
-        "/../assets/images/screenshout1.jpg",
-        "/../assets/images/screenshout2.jpg"
+        "src/assets/images/screenshout1.jpg",
+        "src/assets/images/screenshout2.jpg"
       ],
       scrollDescription1: "Scroll to next element",
       description3:"View type of the calendar can be changed between <b>Daily</b> and<b> Monthly </b>:",
