@@ -18,6 +18,9 @@ import EnabledDays from '@/view/pages/EnabledDays/route'
 import ColorizedDays from '@/view/pages/ColorizedDays/route'
 import CalendarType from '@/view/pages/CalendarType/route'
 import Language from '@/view/pages/Language/route'
+import Header from '@/view/pages/Header/route'
+import styleEvent from '@/view/pages/styleEvent/route'
+
 
 Vue.use(Router)
 
@@ -38,7 +41,9 @@ const router = new Router({
     DisabledDays,
     EnabledDays,
     ColorizedDays,
-    Language
+    Language,
+    Header,
+    styleEvent
   ]
 })
 

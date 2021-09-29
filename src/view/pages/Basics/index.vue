@@ -151,7 +151,7 @@
 </template>
 
 <script>
-import TryOption from '../../../components/TryOptions.vue'
+import TryOption from "../../../components/TryOptions.vue";
 export default {
   name: "Basics",
   components: {
@@ -160,20 +160,22 @@ export default {
   data() {
     return {
       array: [{ name: "Jalali" }, { name: "Gregorian" }],
-      description: "Type of the calendar can be changed between <b>Jalali</b> and<b> Gregorian </b>:",
+      description:
+        "Type of the calendar can be changed between <b>Jalali</b> and<b> Gregorian </b>:",
       images: [
         "/../assets/images/screenshout1.jpg",
         "/../assets/images/screenshout2.jpg"
       ],
-      scrollDescription :"Scroll to View Type",
+      scrollDescription: "Scroll to View Type",
       // switch1: true,
       fields: [{ name: "Daily" }, { name: "Monthly" }],
-      description2 : "View type of the calendar can be changed between <b>Daily</b> and<b> Monthly </b>",
-      images2:[
+      description2:
+        "View type of the calendar can be changed between <b>Daily</b> and<b> Monthly </b>",
+      images2: [
         "/../assets/images/screenshout1.jpg",
         "/../assets/images/screenshout2.jpg"
       ],
-      scrollDescription1 :"Scroll to next element"
+      scrollDescription1: "Scroll to next element"
     };
   }
 };
@@ -185,7 +187,6 @@ export default {
 }
 .calendar_image-width {
   float: right;
-
 }
 
 h1 {
@@ -215,9 +216,8 @@ img {
   margin: 30px 0px 40px 10px;
 }
 
-button{
+button {
   float: right;
   padding: 20px;
 }
-
 </style>

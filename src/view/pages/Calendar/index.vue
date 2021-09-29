@@ -1,79 +1,81 @@
 <template>
   <div id="Calendar">
+    
     <h1>
-      this is Calendar content
+      Calendar 
     </h1>
     <v-container>
-      <v-radio-group v-model="radioGroup">
-        <v-radio
-          v-for="item in array"
-          :key="item.name"
-          :label="`Radio ${item.name}`"
-        ></v-radio>
-        <v-container>
-          <img
-            v-if="radioGroup === 0"
-            src="../../../assets/images/screenshout1.jpg"
-            alt="event_calendar_options"
-            class="calendar_image-width"
-          >
-          <img
-            v-if="radioGroup === 1"
-            src="../../../assets/images/screenshout2.jpg"
-            alt="event_calendar_options"
-            class="calendar_image-width"
-          >
-          <img
-            v-if="radioGroup === 2"
-            src="../../../assets/images/screenshout1.jpg"
-            alt="event_calendar_options"
-            class="calendar_image-width"
-          >
-        </v-container>
-      </v-radio-group>
-      <v-switch
-        v-model="switch1"
-        :label="`Switch 1: ${switch1.toString()}`"
-      ></v-switch>
-      <img
-        v-if="switch1"
-        src="../../../assets/images/screenshout1.jpg"
-        alt="event_calendar_options"
-        class="calendar_image-width"
-      >
-      <img
-        v-else
-        src="../../../assets/images/screenshout2.jpg"
-        alt="event_calendar_options"
-        class="calendar_image-width"
-      >
+      <try-option
+        :title="title1"
+        :description="description3"
+        :images="images2"
+        :array="fields"
+        :scrollDescription="scrollDescription1"
+        type="radio"
+      />
+
+      <try-option
+        :title="title2"
+        :description="description2"
+        :images="images2"
+        :array="fields"
+        :scrollDescription="scrollDescription1"
+        type="switch"
+      />
+
+      <try-option
+        :title="title3"
+        :description="description4"
+        :images="images2"
+        :array="fields"
+        :scrollDescription="scrollDescription1"
+        type="none"
+      />
     </v-container>
   </div>
 </template>
 
 <script>
-  export default {
-    name: 'Contributing',
-    data() {
-      return {
-        switch1: true,
-        array: [
-          {name: 'Issue 1'},
-          {name: 'Issue 2'},
-          {name: 'Issue 3'}
-        ],
-        radioGroup: 0
-      }
-    },
+import TryOption from "../../../components/TryOptions.vue";
+export default {
+  name: "Contributing",
+  components: {
+    TryOption
+  },
+  data() {
+    return {
+      fields: [{ name: "Daily" }, { name: "Monthly" }],
+      description2:
+        "Will allow user to change view type directly in runtime:",
+      images2: [
+        "/../assets/images/screenshout1.jpg",
+        "/../assets/images/screenshout2.jpg"
+      ],
+      scrollDescription1: "Scroll to next element",
+      description3:"View type of the calendar can be changed between <b>Daily</b> and<b> Monthly </b>:",
+      description4:"Font of the calendar can be customized",
+      title1 : {name:"View type" , description :"ViewType"},
+      title2: {name : "Toggle view type" , description:"Boolean"},
+      title3: {name: "Font" , description:"String"}
+      
+
+    };
   }
+};
 </script>
 
 <style>
-  .Home {
-    padding: 50px;
-  }
+.Home {
+  padding: 50px;
+}
 
-  .calendar_image-width {
-    max-width: 100%;
-  }
+.calendar_image-width {
+  max-width: 100%;
+}
+
+.v-application p {
+  margin-bottom: 10px !important;
+}
+
+
 </style>
