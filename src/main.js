@@ -8,6 +8,9 @@ import en from 'vee-validate/dist/locale/en'
 import VueLoading from 'vuex-loading'
 import vuetify from '@/plugins/vuetify'
 
+const VueScrollTo = require('vue-scrollto')
+Vue.use(VueScrollTo)
+
 Validator.localize('en', en)
 
 const config = {
