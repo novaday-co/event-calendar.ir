@@ -48,7 +48,8 @@
 
 <script>
 import { component as VueCodeHighlight } from 'vue-code-highlight'
-import 'vue-code-highlight/themes/prism-tomorrow.css'
+import 'vue-code-highlight/themes/prism-okaidia.css'
+import 'prism-es6/components/prism-markup-templating'
 import 'prism-es6/components/prism-dart'
 
 export default {
