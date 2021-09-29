@@ -7,6 +7,7 @@
       <v-divider></v-divider>
       <v-treeview
         v-model="tree"
+        :active.sync="active"
         :open="initiallyOpen"
         :items="items"
         activatable
@@ -14,7 +15,11 @@
         open-on-click
       >
         <template v-slot:prepend="{ item, open }">
-          <router-link :to="item.to">
+          <router-link
+            :to="{ path: item.to }"
+            :style="item.to === $route.path ? 'color: blue' : ''"
+            @change="changePage(item.name)"
+          >
             <v-icon v-if="!item.file">
               {{ open ? "mdi-folder-open" : "mdi-folder" }}
             </v-icon>
@@ -30,125 +35,131 @@
 
 <script>
 export default {
-  data () {
+  data() {
     return {
-      initiallyOpen: ['public'],
+      initiallyOpen: ["Getting started"],
+      active: [],
       drawer: true,
       files: {
-        html: 'mdi-language-html5',
-        js: 'mdi-nodejs',
-        json: 'mdi-code-json',
-        md: 'mdi-language-markdown',
-        pdf: 'mdi-file-pdf',
-        png: 'mdi-file-image',
-        txt: 'mdi-file-document-outline',
-        xls: 'mdi-file-excel'
+        html: "mdi-language-html5",
+        js: "mdi-nodejs",
+        json: "mdi-code-json",
+        md: "mdi-language-markdown",
+        pdf: "mdi-file-pdf",
+        png: "mdi-file-image",
+        txt: "mdi-file-document-outline",
+        xls: "mdi-file-excel"
       },
       tree: [],
       items: [
         {
-          name: 'Getting started',
+          name: "Getting started",
           children: [
             {
-              name: 'Introduction',
-              file: '',
-              to: '/'
+              name: "Introduction",
+              file: "",
+              to: "/"
             },
             {
-              name: 'License',
-              file: '',
-              to: '/license'
+              name: "License",
+              file: "",
+              to: "/license"
             },
             {
-              name: 'Quick start',
-              file: '',
-              to: '/quickStart'
+              name: "Quick start",
+              file: "",
+              to: "/quickStart"
             },
             {
-              name: 'Change log',
-              file: '',
-              to: '/changeLog'
+              name: "Change log",
+              file: "",
+              to: "/changeLog"
             },
             {
-              name: 'Support',
-              file: '',
-              to: '/support'
+              name: "Support",
+              file: "",
+              to: "/support"
             }
           ]
         },
         {
-          name: 'Options',
+          name: "Options",
           children: [
             {
-              name: 'Basics',
-              file: '',
-              to: '/basics'
+              name: "Basics",
+              file: "",
+              to: "/basics"
             },
             {
-              name: 'Calendar',
-              file: '',
-              to: '/calendar'
+              name: "Calendar",
+              file: "",
+              to: "/calendar"
             },
             {
-              name: 'Month',
-              file: '',
-              to: '/month'
+              name: "Month",
+              file: "",
+              to: "/month"
             },
             {
-              name: 'Day',
-              file: '',
-              to: '/day'
+              name: "Day",
+              file: "",
+              to: "/day"
             },
             {
-              name: 'Event',
-              file: '',
-              to: '/event'
+              name: "Event",
+              file: "",
+              to: "/event"
             },
             {
-              name: 'Disabled days',
-              file: '',
-              to: '/disabledDays'
+              name: "Disabled days",
+              file: "",
+              to: "/disabledDays"
             },
             {
-              name: 'Enabled days',
-              file: '',
-              to: '/enabledDays'
+              name: "Enabled days",
+              file: "",
+              to: "/enabledDays"
             },
             {
-              name: 'Colorized days',
-              file: '',
-              to: '/colorizedDays'
+              name: "Colorized days",
+              file: "",
+              to: "/colorizedDays"
             }
           ]
         },
         {
-          name: 'Contributing',
+          name: "Contributing",
           children: [
             {
-              name: 'Architecture',
-              file: '',
-              to: '/architecture'
+              name: "Architecture",
+              file: "",
+              to: "/architecture"
             },
             {
-              name: 'Calendar type',
-              file: '',
-              to: '/calendarType'
+              name: "Calendar type",
+              file: "",
+              to: "/calendarType"
             },
             {
-              name: 'Language',
-              file: '',
-              to: '/language'
+              name: "Language",
+              file: "",
+              to: "/language"
             }
           ]
         }
       ]
+    };
+  },
+  methods: {
+    changePage(title) {
+      this.initiallyOpen = [title];
     }
   }
-}
+};
 </script>
 
 <style scoped>
-  a {
-    text-decoration: none;
-  }
+a {
+  text-decoration: none;
+}
 </style>
