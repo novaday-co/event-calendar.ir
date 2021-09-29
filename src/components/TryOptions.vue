@@ -76,7 +76,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 h1 {
   padding-left: 30px;
 }
@@ -95,11 +95,6 @@ h1 {
 }
 
 .paragraph {
-  margin: 30px 0px 40px 10px;
-}
-
-button {
-  float: right;
-  padding: 20px;
+  margin: 30px 
 }
 </style>

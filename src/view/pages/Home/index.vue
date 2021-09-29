@@ -59,7 +59,7 @@ export default {
   }
 }
 </script>
-<style scope>
+<style scoped>
   #introduction{
     margin-top: 50px;
   }

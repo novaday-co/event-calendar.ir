@@ -54,7 +54,7 @@ export default {
 }
 </script>
 
-<style scope>
+<style scoped>
 .Home {
   padding: 50px;
 }
@@ -87,10 +87,5 @@ img {
 
 .paragraph {
   margin: 30px 0px 40px 10px;
-}
-
-button {
-  float: right;
-  padding: 20px;
 }
 </style>
