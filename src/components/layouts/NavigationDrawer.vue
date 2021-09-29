@@ -100,11 +100,7 @@ export default {
               file: "",
               to: "/month"
             },
-            {
-              name: "Day",
-              file: "",
-              to: "/day"
-            },
+            
             {
               name: "Event",
               file: "",
@@ -125,6 +121,27 @@ export default {
               file: "",
               to: "/colorizedDays"
             }
+          ]
+        },
+        {
+          name: "Style",
+          children:[
+          {
+            name:"Day",
+            file :"",
+            to:"/day"
+            },
+            {
+            name:"Event",
+            file :"",
+            to:"/styleEvent"
+            },
+            {
+            name:"Header",
+            file :"",
+            to:"/header"
+            },
+
           ]
         },
         {
