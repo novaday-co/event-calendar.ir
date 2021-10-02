@@ -59,7 +59,7 @@ export default {
   }
 }
 </script>
-<style scoped>
+<style>
   #introduction{
     margin-top: 50px;
   }
@@ -72,7 +72,7 @@ export default {
 
   h2{
     font-size: 27px;
-    border-bottom: 1px solid rgb(206, 206, 216);
+    /* border-bottom: 1px solid rgb(206, 206, 216); */
     padding-bottom: 3px;
   }
 

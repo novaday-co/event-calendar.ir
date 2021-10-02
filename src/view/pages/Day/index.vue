@@ -101,8 +101,8 @@ export default {
       description2:
         "Will allow user to change view type directly in runtime:",
       images2: [
-        "/../assets/images/screenshout1.jpg",
-        "/../assets/images/screenshout2.jpg"
+        "src/assets/images/screenshout1.jpg",
+        "src/assets/images/screenshout2.jpg"
       ],
       scrollDescription1: "Scroll to next element",
       title1 : {name:"Week day selected color" , description :"Color"},
@@ -119,10 +119,14 @@ export default {
   }
 </script>
 
-<style>
+<style >
   .Home {
     padding: 50px;
   }
+  .row{
+    margin: 10px;
+  }
 
+ 
 
 </style>
