@@ -14,18 +14,19 @@
         item-key="name"
         open-on-click
       >
-        <template v-slot:prepend="{ item, open }">
+        <template slot="label" slot-scope="props">
           <router-link
-            :to="{ path: item.to }"
-            :style="item.to === $route.path ? 'color: blue' : ''"
-            @change="changePage(item.name)"
+            :to="{ path: props.item.to }"
+            class="routerLink"
+            @change="changePage(props.item.name)"
           >
-            <v-icon v-if="!item.file">
-              {{ open ? "mdi-folder-open" : "mdi-folder" }}
+            <v-icon v-if="!props.item.file">
+              {{ "mdi-folder" }}
             </v-icon>
             <v-icon v-else>
-              {{ files[item.file] }}
+              {{ files[props.item.file] }}
             </v-icon>
+            {{ props.item.name }}
           </router-link>
         </template>
       </v-treeview>
@@ -178,5 +179,10 @@ export default {
 <style scoped>
 a {
   text-decoration: none;
+}
+
+.routerLink {
+  color: rgba(0,0,0,.54);
+  font-weight: 500;
 }
 </style>
