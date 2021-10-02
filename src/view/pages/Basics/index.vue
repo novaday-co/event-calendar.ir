@@ -13,12 +13,11 @@
       />
       <try-option
         :title="title1"
-        :description="description2"
-        :images="images2"
-        :array="fields"
-        :scrollDescription="scrollDescription1"
+        :description="description1"
+        type="none"
       />
 
+      
   </div>
 </template>
 
@@ -32,7 +31,7 @@ export default {
   data() {
     return {
       title: {name : "Calendar type"},
-      title1: {name : "Test" , description: "test"},
+      title1: {name : "Events" , description: "List <Event>"},
       array: [{ name: 'Jalali' }, { name: 'Gregorian' }],
       description:
         'Type of the calendar can be changed between <b>Jalali</b> and<b> Gregorian </b>:',
@@ -41,14 +40,8 @@ export default {
         'src/assets/images/screenshout2.jpg'
       ],
       scrollDescription: 'Scroll to View Type',
-      fields: [{ name: 'Daily' }, { name: 'Monthly' }],
-      description2:
-        'View type of the calendar can be changed between <b>Daily</b> and<b> Monthly </b>',
-      images2: [
-        'src/assets/images/screenshout1.jpg',
-        'src/assets/images/screenshout2.jpg'
-      ],
-      scrollDescription1: 'Scroll to next element'
+      description1:
+        'Declares days which can has events',
     }
   }
 }

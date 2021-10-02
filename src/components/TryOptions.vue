@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-row>
+    <v-row class="header">
       <v-container class="headerContainer">
       <h2 class="title">{{ title.name }}</h2>
       <p v-if="title.description" class="notes">: {{ title.description }}</p>
@@ -118,6 +118,10 @@ h1 {
 /* .container{
   margin-left: 30px !important;
 } */
+
+.header{
+  align-items: center;
+}
 
 .headerContainer{
   position: relative;
