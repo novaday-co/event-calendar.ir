@@ -1,14 +1,34 @@
 <template>
   <div id="DisabledDays">
     <h1>
-      this is Disabled days content
+      Disabled days 
     </h1>
+
+    <try-option
+        :title="title1"
+        :description="description1"
+        type="none"
+      />
+
+
+
   </div>
 </template>
 
 <script>
+import TryOption from "../../../components/TryOptions.vue";
   export default {
-    name: 'DisabledDays'
+    name: 'DisabledDays',
+    components: {
+      TryOption
+    },
+    data() {
+      return {
+        description1:
+          "Declares days that can't be used",
+        title1 : {name:"DisabledDays" , description :"List <EventDateTime>"}
+      }
+    },
   }
 </script>
 
