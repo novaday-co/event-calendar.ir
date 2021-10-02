@@ -1,15 +1,19 @@
 <template>
   <div>
     <v-row>
+      <v-container class="headerContainer">
       <h2 class="title">{{ title.name }}</h2>
       <p v-if="title.description" class="notes">: {{ title.description }}</p>
+
+      <button v-scroll-to="'#viewtype'" class="scrollButton">
+        {{ scrollDescription }}
+      </button>
+      </v-container>
     </v-row>
     <v-divider></v-divider>
     <v-row class="justify-space-around">
       <v-col cols="12" md="8">
-        <button v-scroll-to="'#viewtype'">
-          {{ scrollDescription }}
-        </button>
+        
         <p class="paragraph" v-html="description" />
         <v-row class="align-items-center">
           <v-col cols="2" v-if="type !== 'none'">
@@ -26,8 +30,8 @@
             </v-radio-group>
           </v-col>
 
-          <v-col v-else-if="type === 'switch'">
-            <v-container class="px-0" fluid>
+          <v-col  v-else-if="type === 'switch'">
+            <v-container class="px-0 switch"  fluid>
               <v-switch v-model="switchButton"></v-switch>
             </v-container>
           </v-col>
@@ -115,6 +119,17 @@ h1 {
   margin-left: 30px !important;
 } */
 
+.headerContainer{
+  position: relative;
+  display: contents;
+}
+
+.scrollButton{
+  position: absolute;
+  right: 60px;
+
+}
+
 .colContainer {
   display: flex;
   flex-direction: column;
@@ -147,6 +162,10 @@ img {
 .notes {
   margin: 13px 0px 0px 9px;
   font-size: 15px;
+}
+
+.switch{
+  margin-top: 3px;
 }
 
 .title {
