@@ -3,18 +3,16 @@
     <h1>
       Basics
     </h1>
-    <h2 class="subtitle">
-      Calendar Type
-      <v-divider></v-divider>
-    </h2>
     <v-container>
       <try-option
+        :title="title"
         :description="description"
         :images="images"
         :array="array"
         :scrollDescription="scrollDescription"
       />
       <try-option
+        :title="title1"
         :description="description2"
         :images="images2"
         :array="fields"
@@ -33,6 +31,8 @@ export default {
   },
   data() {
     return {
+      title: {name : "Calendar type"},
+      title1: {name : "Test" , description: "test"},
       array: [{ name: 'Jalali' }, { name: 'Gregorian' }],
       description:
         'Type of the calendar can be changed between <b>Jalali</b> and<b> Gregorian </b>:',
@@ -58,15 +58,15 @@ export default {
 .Home {
   padding: 50px;
 }
-.calendar_image-width {
+/* .calendar_image-width {
   float: right;
-}
+} */
 
 h1 {
   padding-left: 30px;
 }
 
-.colContainer {
+/* .colContainer {
   display: flex;
   flex-direction: column;
 }
@@ -87,5 +87,5 @@ img {
 
 .paragraph {
   margin: 30px 0px 40px 10px;
-}
+} */
 </style>

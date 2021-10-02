@@ -111,6 +111,10 @@ h1 {
   padding-left: 30px;
 }
 
+/* .container{
+  margin-left: 30px !important;
+} */
+
 .colContainer {
   display: flex;
   flex-direction: column;
