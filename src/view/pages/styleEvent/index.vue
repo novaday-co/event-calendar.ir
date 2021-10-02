@@ -11,6 +11,8 @@
         :array="fields1"
         :scrollDescription="scrollDescription1"
         type="radio"
+        :scrollDest="scrollDest1"
+        
       />
 
       <try-option
@@ -18,8 +20,10 @@
         :description="description2"
         :images="images1"
         :array="fields2"
-        :scrollDescription="scrollDescription1"
+        :scrollDescription="scrollDescription2"
         type="radio"
+        :scrollDest="scrollDest2"
+        id="emptyTextColor"
       />
 
       <try-option
@@ -27,8 +31,10 @@
         :description="none"
         :images="images1"
         :array="fields3"
-        :scrollDescription="scrollDescription1"
+        :scrollDescription="scrollDescription3"
         type="radio"
+        :scrollDest="scrollDest3"
+        id="emptyIcon"
       />
 
       <try-option
@@ -36,8 +42,10 @@
         :description="description4"
         :images="images1"
         :array="fields2"
-        :scrollDescription="scrollDescription1"
+        :scrollDescription="scrollDescription4"
         type="radio"
+        :scrollDest="scrollDest4"
+        id="emptyIconColor"
       />
 
       <try-option
@@ -45,8 +53,10 @@
         :description="description5"
         :images="images1"
         :array="fields2"
-        :scrollDescription="scrollDescription1"
+        :scrollDescription="scrollDescription5"
         type="radio"
+        :scrollDest="scrollDest5"
+        id="backgroundColor"
       />
 
       <try-option
@@ -54,8 +64,10 @@
         :description="description6"
         :images="images1"
         :array="fields2"
-        :scrollDescription="scrollDescription1"
+        :scrollDescription="scrollDescription6"
         type="radio"
+        :scrollDest="scrollDest6"
+        id="titleColor"
       />
 
       <try-option
@@ -63,8 +75,10 @@
         :description="description7"
         :images="images1"
         :array="fields2"
-        :scrollDescription="scrollDescription1"
+        :scrollDescription="scrollDescription7"
         type="radio"
+        :scrollDest="scrollDest7"
+        id="descriptionColor"
       />
 
       <try-option
@@ -72,8 +86,8 @@
         :description="description8"
         :images="images1"
         :array="fields2"
-        :scrollDescription="scrollDescription1"
         type="radio"
+        id="dateTimeColor"
       />
 
 
@@ -98,22 +112,33 @@ import TryOption from "../../../components/TryOptions.vue";
       description5:"Color of event's background",
       description4:"Color of event's empty icon",
       description2:"Color of event's empty text",
-  
-
-
       images1: [
         "src/assets/images/screenshout1.jpg",
         "src/assets/images/screenshout2.jpg"
       ],
-      scrollDescription1: "Scroll to next element",
-      title1 : {name:"Empty text" , description :"String"},
-      title2 : {name:"Empty text color" , description :"Color"},
-      title3 : {name:"Empty icon" , description :"IconData"},
-      title4 : {name:"Empty icon color" , description :"Color"},
-      title5 : {name:"Background color" , description :"Color"},
-      title6 : {name:"Title color" , description :"Color"},
-      title7 : {name:"Description color" , description :"Color"},
-      title8 : {name:"Date time color" , description :"Color"},
+      title1 : {name:"empty text" , description :"String"},
+      title2 : {name:"empty text color" , description :"Color"},
+      title3 : {name:"empty icon" , description :"IconData"},
+      title4 : {name:"empty icon color" , description :"Color"},
+      title5 : {name:"background color" , description :"Color"},
+      title6 : {name:"title color" , description :"Color"},
+      title7 : {name:"description color" , description :"Color"},
+      title8 : {name:"date time color" , description :"Color"},
+      scrollDescription1: "Scroll to empty text color",
+      scrollDescription2: "Scroll to empty icon",
+      scrollDescription3: "Scroll to empty icon color",
+      scrollDescription4: "Scroll to background color",
+      scrollDescription5: "Scroll to title color",
+      scrollDescription6: "Scroll to description color",
+      scrollDescription7: "Scroll to date time color",
+      scrollDest1:"emptyTextColor",
+      scrollDest2:"emptyIcon",
+      scrollDest3:"emptyIconColor",
+      scrollDest4:"backgroundColor",
+      scrollDest5:"titleColor",
+      scrollDest6:"descriptionColor",
+      scrollDest7:"dateTimeColor",
+
  
 
       }

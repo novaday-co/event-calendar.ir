@@ -5,7 +5,7 @@
       <h2 class="title">{{ title.name }}</h2>
       <p v-if="title.description" class="notes">: {{ title.description }}</p>
 
-      <button v-scroll-to="'#viewtype'" class="scrollButton">
+      <button v-scroll-to="`#${scrollDest}`" class="scrollButton">
         {{ scrollDescription }}
       </button>
       </v-container>
@@ -99,6 +99,12 @@ export default {
       default: () => {
         return {};
       }
+    },
+    scrollDest:{
+      type: String,
+      default: () =>{
+        return{};
+      }
     }
   },
   data() {
@@ -149,9 +155,9 @@ img {
   display: inline-block;
 }
 
-/* .v-application p {
-  margin-bottom: 30px !important;
-} */
+.v-application p {
+  margin-bottom: 7px !important;
+}
 .paragraph[data-v-36123513] {
   margin: 0px !important;
 }

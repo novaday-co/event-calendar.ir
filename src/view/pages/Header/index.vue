@@ -9,8 +9,9 @@
         :description="description1"
         :images="images1"
         :array="fields1"
-        :scrollDescription="scrollDescription1"
+        :scrollDescription="scrollDescription"
         type="radio"
+        :scrollDest="scrollDest"
       />
 
       <try-option
@@ -18,8 +19,8 @@
         :description="description2"
         :images="images1"
         :array="fields1"
-        :scrollDescription="scrollDescription1"
         type="radio"
+        id="monthStringTypes"
       />
 
 
@@ -43,9 +44,10 @@ import TryOption from "../../../components/TryOptions.vue";
         "src/assets/images/screenshout1.jpg",
         "src/assets/images/screenshout2.jpg"
         ],
-        scrollDescription1: "Scroll to next element",
-        title1 : {name:"Week day string types" , description :"WeekDayStringTypes"},
-        title2 : {name:"Month string types" , description :"MonthStringTypes"},
+        scrollDescription: "Scroll to month string types",
+        scrollDest:"monthStringTypes",
+        title1 : {name:"week day string types" , description :"WeekDayStringTypes"},
+        title2 : {name:"month string types" , description :"MonthStringTypes"},
 
       }
     },

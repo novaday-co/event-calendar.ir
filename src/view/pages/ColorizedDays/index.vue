@@ -25,7 +25,7 @@ import TryOption from "../../../components/TryOptions.vue";
       return {
         description1 :
           "Make your calendar colorful ! \n\r Declare days that you want to show them by different colors",
-        title1 : {name:"ColorizedDays" , description :"List <EventDateTime>"}
+        title1 : {name:"colorized days" , description :"List <EventDateTime>"}
       }
     },
   }
