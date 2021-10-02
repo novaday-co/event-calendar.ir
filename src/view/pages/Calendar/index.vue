@@ -4,7 +4,7 @@
     <h1>
       Calendar 
     </h1>
-    <v-container>
+
       <try-option
         :title="title1"
         :description="description2"
@@ -31,7 +31,7 @@
         :scrollDescription="scrollDescription1"
         type="none"
       />
-    </v-container>
+
   </div>
 </template>
 

@@ -3,7 +3,7 @@
     <h1>
       Basics
     </h1>
-    <v-container>
+
       <try-option
         :title="title"
         :description="description"
@@ -18,7 +18,7 @@
         :array="fields"
         :scrollDescription="scrollDescription1"
       />
-    </v-container>
+
   </div>
 </template>
 
@@ -62,9 +62,11 @@ export default {
   float: right;
 } */
 
-h1 {
+/* h1 {
   padding-left: 30px;
-}
+} */
+
+
 
 /* .colContainer {
   display: flex;
