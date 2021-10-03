@@ -34,7 +34,6 @@
       :description="description3"
       :images="images2"
       :array="fields"
-      :scrollDescription="scrollDescription1"
       :code="code2"
       :codeBox= true
       type="none"

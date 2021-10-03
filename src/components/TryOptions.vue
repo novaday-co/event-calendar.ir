@@ -16,8 +16,7 @@
 
 
         <p class="paragraph" v-html="description" />
-        <vue-code-highlight v-if="codeBox===true" language="dart">
-
+        <vue-code-highlight v-if="codeBox===true" language="dart" class="codeDiv">
           <pre class="mb-0 py-2" v-html="code">
           </pre>
         </vue-code-highlight>
@@ -45,7 +44,7 @@
         </v-row>
       </v-col>
       <v-col cols="12" md="4">
-        <v-container>
+        <v-container class="imageContainer">
           <template v-for="(img, index) in images">
             <img
               :key="index"
@@ -164,6 +163,7 @@ h1 {
 .scrollButton{
   position: absolute;
   right: 60px;
+  margin-bottom: -19px;
 
 }
 
@@ -176,14 +176,29 @@ h1 {
   border-radius: 5px; 
 }
 
+.codeDiv{
+  /* margin: 50px 40px 20px 30px; */
+  width: fit-content;
+  float: right;
+  align-items: flex-start;
+}
+
 img {
   height: auto;
   width: 280px;
   object-fit: scale-down;
 }
 
+.imageContainer{
+  margin-left: 40px;
+}
+
 .radioButton {
   display: inline-block;
+}
+
+.align-items-center{
+  align-items: baseline;
 }
 
 .v-application p {
