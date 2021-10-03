@@ -2,25 +2,18 @@
   <div>
     <v-row class="header">
       <v-container class="headerContainer">
-      <h2 class="title">{{ title.name }}</h2>
-      <p v-if="title.description" class="notes">: {{ title.description }}</p>
+        <h2 class="title">{{ title.name }}</h2>
+        <p v-if="title.description" class="notes">: {{ title.description }}</p>
 
-      <button v-scroll-to="`#${scrollDest}`" class="scrollButton">
-        {{ scrollDescription }}
-      </button>
+        <button v-scroll-to="`#${scrollDest}`" class="scrollButton">
+          {{ scrollDescription }}
+        </button>
       </v-container>
     </v-row>
     <v-divider></v-divider>
     <v-row class="justify-space-around">
-      <v-col cols="12" md="8">
-
-
+      <v-col cols="12" md="6">
         <p class="paragraph" v-html="description" />
-        <vue-code-highlight v-if="codeBox===true" language="dart" class="codeDiv">
-          <pre class="mb-0 py-2" v-html="code">
-          </pre>
-        </vue-code-highlight>
-
         <v-row class="align-items-center">
           <v-col cols="2" v-if="type !== 'none'">
             <p>Try it now:</p>
@@ -36,12 +29,21 @@
             </v-radio-group>
           </v-col>
 
-          <v-col  v-else-if="type === 'switch'">
-            <v-container class="px-0 switch"  fluid>
+          <v-col v-else-if="type === 'switch'">
+            <v-container class="px-0 switch" fluid>
               <v-switch v-model="switchButton"></v-switch>
             </v-container>
           </v-col>
         </v-row>
+      </v-col>
+      <v-col cols="12" md="2">
+        <vue-code-highlight
+          v-if="codeBox === true"
+          language="dart"
+          class="codeDiv"
+        >
+          <pre class="mb-0 py-2" v-html="code"></pre>
+        </vue-code-highlight>
       </v-col>
       <v-col cols="12" md="4">
         <v-container class="imageContainer">
@@ -68,12 +70,12 @@
 </template>
 
 <script>
-import { component as VueCodeHighlight } from 'vue-code-highlight'
-import 'vue-code-highlight/themes/prism-okaidia.css'
-import 'prism-es6/components/prism-markup-templating'
-import 'prism-es6/components/prism-dart'
+import { component as VueCodeHighlight } from "vue-code-highlight";
+import "vue-code-highlight/themes/prism-okaidia.css";
+import "prism-es6/components/prism-markup-templating";
+import "prism-es6/components/prism-dart";
 export default {
-  components:{
+  components: {
     VueCodeHighlight
   },
   props: {
@@ -113,23 +115,23 @@ export default {
         return {};
       }
     },
-    scrollDest:{
+    scrollDest: {
       type: String,
-      default: () =>{
-        return{};
+      default: () => {
+        return {};
       }
     },
 
-    code:{
-      type : String,
-      default:()=>{
-        return{};
+    code: {
+      type: String,
+      default: () => {
+        return {};
       }
     },
-    codeBox:{
-      type : Boolean,
-      default:()=>{
-        return{};
+    codeBox: {
+      type: Boolean,
+      default: () => {
+        return {};
       }
     }
   },
@@ -138,7 +140,7 @@ export default {
       radioGroup: 0,
       switchButton: true
     };
-  },
+  }
 };
 </script>
 
@@ -151,20 +153,19 @@ h1 {
   margin-left: 30px !important;
 } */
 
-.header{
+.header {
   align-items: center;
 }
 
-.headerContainer{
+.headerContainer {
   position: relative;
   display: contents;
 }
 
-.scrollButton{
+.scrollButton {
   position: absolute;
   right: 60px;
   margin-bottom: -19px;
-
 }
 
 .colContainer {
@@ -173,10 +174,10 @@ h1 {
 }
 
 .language-dart {
-  border-radius: 5px; 
+  border-radius: 5px;
 }
 
-.codeDiv{
+.codeDiv {
   /* margin: 50px 40px 20px 30px; */
   width: fit-content;
   float: right;
@@ -189,7 +190,7 @@ img {
   object-fit: scale-down;
 }
 
-.imageContainer{
+.imageContainer {
   margin-left: 40px;
 }
 
@@ -197,7 +198,7 @@ img {
   display: inline-block;
 }
 
-.align-items-center{
+.align-items-center {
   align-items: baseline;
 }
 
@@ -211,7 +212,7 @@ img {
   margin: 30px;
 }
 
-.row{
+.row {
   margin: 12px;
 }
 
@@ -220,7 +221,7 @@ img {
   font-size: 15px;
 }
 
-.switch{
+.switch {
   margin-top: 3px;
 }
 
