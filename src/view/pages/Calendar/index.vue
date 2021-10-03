@@ -73,9 +73,24 @@ export default {
       title3: { name: "font", description: "String" },
       scrollDest: "toggleViewType",
       scrollDest1: "font",
-      code : "EventCalendar(calendarType: CalendarType.GREGORIAN,calendarOptions: CalendarOptions(viewType: ViewType.MONTHLY),)",
-      code1 : "EventCalendar(calendarType: CalendarType.GREGORIAN,calendarOptions: CalendarOptions(toggleViewType: true),);",
-      code2 : " EventCalendar(calendarType: CalendarType.GREGORIAN,calendarOptions: CalendarOptions(font: 'DanaFamily'))"
+      code : `EventCalendar(
+  calendarType: CalendarType.GREGORIAN,
+  calendarOptions: CalendarOptions(
+    viewType: ViewType.MONTHLY
+  ),
+)`,
+      code1 : `EventCalendar(
+  calendarType: CalendarType.GREGORIAN,
+  calendarOptions: CalendarOptions(
+    toggleViewType: true
+  ),
+);`,
+      code2 : ` EventCalendar(
+  calendarType: CalendarType.GREGORIAN,
+  calendarOptions: CalendarOptions(
+    font: 'DanaFamily'
+  ),
+)`
       
     };
   }

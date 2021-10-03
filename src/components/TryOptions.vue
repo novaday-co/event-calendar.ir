@@ -17,8 +17,8 @@
 
         <p class="paragraph" v-html="description" />
         <vue-code-highlight v-if="codeBox===true" language="dart">
-          <pre class="mb-0 py-2">
-          {{code}}  
+
+          <pre class="mb-0 py-2" v-html="code">
           </pre>
         </vue-code-highlight>
 
