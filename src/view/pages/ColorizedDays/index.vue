@@ -7,6 +7,8 @@
     <try-option
       :title="title1"
       :description="description1"
+      :code="code"
+      :codeBox= true
       type="none"
     />
 
@@ -24,8 +26,15 @@ import TryOption from "../../../components/TryOptions.vue";
     data() {
       return {
         description1 :
-          "Make your calendar colorful ! \n\r Declare days that you want to show them by different colors",
-        title1 : {name:"colorized days" , description :"List <EventDateTime>"}
+          "Declares days that you want to show by different colors",
+        title1 : {name:"colorized days" , description :"List <EventDateTime>"},
+        code : `EventCalendar(
+  calendarType: CalendarType.GREGORIAN,
+  colorizedDays: [
+    EventDateTime(year: 2021, month: 10, day: 12),
+    EventDateTime(year: 2022, month: 7, day: 14),
+  ],
+)`
       }
     },
   }

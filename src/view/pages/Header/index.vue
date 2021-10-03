@@ -52,8 +52,14 @@ import TryOption from "../../../components/TryOptions.vue";
         scrollDest:"monthStringTypes",
         title1 : {name:"week day string types" , description :"WeekDayStringTypes"},
         title2 : {name:"month string types" , description :"MonthStringTypes"},
-        code: "EventCalendar(calendarType: CalendarType.GREGORIAN,headersStyle: HeadersStyle(weekDayStringType: WeekDayStringTypes.FULL),)",
-        code1: "EventCalendar(calendarType: CalendarType.GREGORIAN,headersStyle: HeadersStyle(monthStringType: MonthStringTypes.FULL),)"
+        code: `EventCalendar(
+  calendarType: CalendarType.GREGORIAN,
+  headersStyle: HeadersStyle(weekDayStringType: WeekDayStringTypes.FULL),
+)`,
+        code1: `EventCalendar(
+  calendarType: CalendarType.GREGORIAN,
+  headersStyle: HeadersStyle(monthStringType: MonthStringTypes.FULL),
+)`
       }
     },
   }

@@ -7,6 +7,8 @@
     <try-option
         :title="title1"
         :description="description1"
+        :code="code"
+        :codeBox= true
         type="none"
       />
 
@@ -26,7 +28,14 @@ import TryOption from "../../../components/TryOptions.vue";
       return {
         description1:
           "Declares days that can't be used",
-        title1 : {name:"disabled days" , description :"List <EventDateTime>"}
+        title1 : {name:"disabled days" , description :"List <EventDateTime>"},
+        code : `EventCalendar(
+  calendarType: CalendarType.GREGORIAN,
+  disabledDays: [
+    EventDateTime(year: 2021, month: 10, day: 12),
+    EventDateTime(year: 2022, month: 7, day: 14),
+  ],
+)`
       }
     },
   }

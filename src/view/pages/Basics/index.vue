@@ -11,6 +11,9 @@
         :array="array"
         :scrollDescription="scrollDescription"
         :scrollDest="scrollDest"
+        :code="code"
+        :codeBox= true
+
       />
       <try-option
         :title="title1"
@@ -58,7 +61,8 @@ export default {
       scrollDescription: 'Scroll to events',
       scrollDescription1: 'Scroll to middleWidget',
       scrollDest: "events",
-      scrollDest1:"middleWidget"
+      scrollDest1:"middleWidget",
+      code: `EventCalendar(calendarType: CalendarType.GREGORIAN,)`
       
     }
   }

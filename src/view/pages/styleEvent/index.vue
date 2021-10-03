@@ -12,6 +12,8 @@
         :scrollDescription="scrollDescription1"
         type="radio"
         :scrollDest="scrollDest1"
+        :code="code"
+        :codeBox= true
         
       />
 
@@ -23,6 +25,8 @@
         :scrollDescription="scrollDescription2"
         type="radio"
         :scrollDest="scrollDest2"
+        :code="code1"
+        :codeBox= true
         id="emptyTextColor"
       />
 
@@ -34,6 +38,8 @@
         :scrollDescription="scrollDescription3"
         type="radio"
         :scrollDest="scrollDest3"
+        :code="code2"
+        :codeBox= true
         id="emptyIcon"
       />
 
@@ -45,6 +51,8 @@
         :scrollDescription="scrollDescription4"
         type="radio"
         :scrollDest="scrollDest4"
+        :code="code3"
+        :codeBox= true
         id="emptyIconColor"
       />
 
@@ -56,6 +64,8 @@
         :scrollDescription="scrollDescription5"
         type="radio"
         :scrollDest="scrollDest5"
+        :code="code4"
+        :codeBox= true
         id="backgroundColor"
       />
 
@@ -67,6 +77,8 @@
         :scrollDescription="scrollDescription6"
         type="radio"
         :scrollDest="scrollDest6"
+        :code="code5"
+        :codeBox= true
         id="titleColor"
       />
 
@@ -78,6 +90,8 @@
         :scrollDescription="scrollDescription7"
         type="radio"
         :scrollDest="scrollDest7"
+        :code="code6"
+        :codeBox= true
         id="descriptionColor"
       />
 
@@ -86,6 +100,8 @@
         :description="description8"
         :images="images1"
         :array="fields2"
+        :code="code7"
+        :codeBox= true
         type="radio"
         id="dateTimeColor"
       />
@@ -138,6 +154,38 @@ import TryOption from "../../../components/TryOptions.vue";
       scrollDest5:"titleColor",
       scrollDest6:"descriptionColor",
       scrollDest7:"dateTimeColor",
+      code : `EventCalendar(
+  calendarType: CalendarType.GREGORIAN,
+  eventStyle: EventStyle(emptyText: ‘Oops! No event's here :(’),
+)`,
+      code1: `EventCalendar(
+  calendarType: CalendarType.GREGORIAN,
+  eventStyle: EventStyle(emptyTextColor: Colors.red),
+)`,
+      code2: `EventCalendar(
+  calendarType: CalendarType.GREGORIAN,
+  eventStyle: EventStyle(emptyIcon: Icons.reorder),
+)`,
+      code3: `EventCalendar(
+  calendarType: CalendarType.GREGORIAN,
+  eventStyle: EventStyle(emptyIconColor: Colors.red),
+)`,
+      code4: `EventCalendar(
+  calendarType: CalendarType.GREGORIAN,
+  eventStyle: EventStyle(backgroundColor: Colors.red),
+)`,
+      code5: `EventCalendar(
+  calendarType: CalendarType.GREGORIAN,
+  eventStyle: EventStyle(titleColor: Colors.red),
+)`,
+      code6: `EventCalendar(
+  calendarType: CalendarType.GREGORIAN,
+  eventStyle: EventStyle(descriptionColor: Colors.red),
+)`,
+      code7: `EventCalendar(
+  calendarType: CalendarType.GREGORIAN,
+  eventStyle: EventStyle(dateTimeColor: Colors.red),
+)`
 
  
 
