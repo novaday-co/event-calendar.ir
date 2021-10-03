@@ -13,8 +13,15 @@
     <v-divider></v-divider>
     <v-row class="justify-space-around">
       <v-col cols="12" md="8">
-        
+
+
         <p class="paragraph" v-html="description" />
+        <vue-code-highlight v-if="codeBox===true" language="dart">
+          <pre class="mb-0 py-2">
+          {{code}}  
+          </pre>
+        </vue-code-highlight>
+
         <v-row class="align-items-center">
           <v-col cols="2" v-if="type !== 'none'">
             <p>Try it now:</p>
@@ -62,7 +69,14 @@
 </template>
 
 <script>
+import { component as VueCodeHighlight } from 'vue-code-highlight'
+import 'vue-code-highlight/themes/prism-okaidia.css'
+import 'prism-es6/components/prism-markup-templating'
+import 'prism-es6/components/prism-dart'
 export default {
+  components:{
+    VueCodeHighlight
+  },
   props: {
     array: {
       type: Array,
@@ -105,6 +119,19 @@ export default {
       default: () =>{
         return{};
       }
+    },
+
+    code:{
+      type : String,
+      default:()=>{
+        return{};
+      }
+    },
+    codeBox:{
+      type : Boolean,
+      default:()=>{
+        return{};
+      }
     }
   },
   data() {
@@ -112,7 +139,7 @@ export default {
       radioGroup: 0,
       switchButton: true
     };
-  }
+  },
 };
 </script>
 
@@ -143,6 +170,10 @@ h1 {
 .colContainer {
   display: flex;
   flex-direction: column;
+}
+
+.language-dart {
+  border-radius: 5px; 
 }
 
 img {
