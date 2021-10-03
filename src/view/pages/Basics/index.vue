@@ -10,11 +10,22 @@
         :images="images"
         :array="array"
         :scrollDescription="scrollDescription"
+        :scrollDest="scrollDest"
       />
       <try-option
         :title="title1"
         :description="description1"
+        :scrollDescription="scrollDescription1"
+        :scrollDest="scrollDest1"
         type="none"
+        id="events"
+      />
+
+      <try-option
+        :title="title2"
+        :description="description2"
+        type="none"
+        id="middleWidget"
       />
 
       
@@ -30,18 +41,25 @@ export default {
   },
   data() {
     return {
-      title: {name : "Calendar type"},
-      title1: {name : "Events" , description: "List <Event>"},
+      title: {name : "calendar type"},
+      title1: {name : "events" , description: "List <Event>"},
+      title2: {name : "middleWidget" , description: "Widget"},
       array: [{ name: 'Jalali' }, { name: 'Gregorian' }],
       description:
         'Type of the calendar can be changed between <b>Jalali</b> and<b> Gregorian </b>:',
+      description1:
+        'Declares days which can has events',
+      description2:
+      'Declares a widget between calendar & events',
       images: [
         'src/assets/images/screenshout1.jpg',
         'src/assets/images/screenshout2.jpg'
       ],
-      scrollDescription: 'Scroll to View Type',
-      description1:
-        'Declares days which can has events',
+      scrollDescription: 'Scroll to events',
+      scrollDescription1: 'Scroll to middleWidget',
+      scrollDest: "events",
+      scrollDest1:"middleWidget"
+      
     }
   }
 }

@@ -27,7 +27,7 @@ import TryOption from "../../../components/TryOptions.vue";
       return {
         description1:
           "Declares days that can be selected",
-        title1 : {name:"EnabledDays" , description :"List <EventDateTime>"}
+        title1 : {name:"enabled days" , description :"List <EventDateTime>"}
       }
     },
   }

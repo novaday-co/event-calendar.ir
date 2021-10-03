@@ -26,7 +26,7 @@ import TryOption from "../../../components/TryOptions.vue";
       return {
         description1:
           "Declares days that can't be used",
-        title1 : {name:"DisabledDays" , description :"List <EventDateTime>"}
+        title1 : {name:"disabled days" , description :"List <EventDateTime>"}
       }
     },
   }
