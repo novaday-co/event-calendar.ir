@@ -11,6 +11,8 @@
       :array="fields"
       :scrollDescription="scrollDescription"
       :scrollDest="scrollDest"
+      :code="code"
+      :codeBox= true
       type="radio"
     />
 
@@ -21,6 +23,8 @@
       :array="fields"
       :scrollDescription="scrollDescription1"
       :scrollDest="scrollDest1"
+      :code="code1"
+      :codeBox= true
       type="switch"
       id="toggleViewType"
     />
@@ -31,6 +35,8 @@
       :images="images2"
       :array="fields"
       :scrollDescription="scrollDescription1"
+      :code="code2"
+      :codeBox= true
       type="none"
       id="font"
     />
@@ -39,10 +45,15 @@
 
 <script>
 import TryOption from "../../../components/TryOptions.vue";
+import { component as VueCodeHighlight } from 'vue-code-highlight'
+import 'vue-code-highlight/themes/prism-okaidia.css'
+import 'prism-es6/components/prism-markup-templating'
+import 'prism-es6/components/prism-dart'
 export default {
   name: "Contributing",
   components: {
-    TryOption
+    TryOption,
+    VueCodeHighlight
   },
   data() {
     return {
@@ -62,6 +73,10 @@ export default {
       title3: { name: "font", description: "String" },
       scrollDest: "toggleViewType",
       scrollDest1: "font",
+      code : "EventCalendar(calendarType: CalendarType.GREGORIAN,calendarOptions: CalendarOptions(viewType: ViewType.MONTHLY),)",
+      code1 : "EventCalendar(calendarType: CalendarType.GREGORIAN,calendarOptions: CalendarOptions(toggleViewType: true),);",
+      code2 : " EventCalendar(calendarType: CalendarType.GREGORIAN,calendarOptions: CalendarOptions(font: 'DanaFamily'))"
+      
     };
   }
 };

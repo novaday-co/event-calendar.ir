@@ -12,6 +12,8 @@
         :scrollDescription="scrollDescription"
         type="radio"
         :scrollDest="scrollDest"
+        :code="code"
+        :codeBox= true
       />
 
       <try-option
@@ -19,6 +21,8 @@
         :description="description2"
         :images="images1"
         :array="fields1"
+        :code="code1"
+        :codeBox= true
         type="radio"
         id="monthStringTypes"
       />
@@ -48,7 +52,8 @@ import TryOption from "../../../components/TryOptions.vue";
         scrollDest:"monthStringTypes",
         title1 : {name:"week day string types" , description :"WeekDayStringTypes"},
         title2 : {name:"month string types" , description :"MonthStringTypes"},
-
+        code: "EventCalendar(calendarType: CalendarType.GREGORIAN,headersStyle: HeadersStyle(weekDayStringType: WeekDayStringTypes.FULL),)",
+        code1: "EventCalendar(calendarType: CalendarType.GREGORIAN,headersStyle: HeadersStyle(monthStringType: MonthStringTypes.FULL),)"
       }
     },
   }
