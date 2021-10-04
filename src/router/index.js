@@ -21,7 +21,6 @@ import Language from '@/view/pages/Language/route'
 import Header from '@/view/pages/Header/route'
 import styleEvent from '@/view/pages/styleEvent/route'
 
-
 Vue.use(Router)
 
 const router = new Router({

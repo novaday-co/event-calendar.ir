@@ -70,10 +70,10 @@
 </template>
 
 <script>
-import { component as VueCodeHighlight } from "vue-code-highlight";
-import "vue-code-highlight/themes/prism-okaidia.css";
-import "prism-es6/components/prism-markup-templating";
-import "prism-es6/components/prism-dart";
+import { component as VueCodeHighlight } from 'vue-code-highlight'
+import 'vue-code-highlight/themes/prism-okaidia.css'
+import 'prism-es6/components/prism-markup-templating'
+import 'prism-es6/components/prism-dart'
 export default {
   components: {
     VueCodeHighlight
@@ -82,76 +82,72 @@ export default {
     array: {
       type: Array,
       default: () => {
-        return [];
+        return []
       }
     },
     description: {
       type: String,
       default: () => {
-        return "";
+        return ''
       }
     },
     images: {
       type: Array,
       default: () => {
-        return [];
+        return []
       }
     },
     scrollDescription: {
       type: String,
       default: () => {
-        return "";
+        return ''
       }
     },
     type: {
       type: String,
       default: () => {
-        return "radio";
+        return 'radio'
       }
     },
     title: {
       type: Object,
       default: () => {
-        return {};
+        return {}
       }
     },
     scrollDest: {
       type: String,
       default: () => {
-        return {};
+        return {}
       }
     },
 
     code: {
       type: String,
       default: () => {
-        return {};
+        return {}
       }
     },
     codeBox: {
       type: Boolean,
       default: () => {
-        return {};
+        return {}
       }
     }
   },
-  data() {
+  data () {
     return {
       radioGroup: 0,
       switchButton: true
-    };
+    }
   }
-};
+}
 </script>
 
 <style scoped>
 h1 {
   padding-left: 30px;
 }
-
-/* .container{
-  margin-left: 30px !important;
-} */
 
 .header {
   align-items: center;

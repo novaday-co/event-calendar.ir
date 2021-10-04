@@ -36,144 +36,142 @@
 
 <script>
 export default {
-  data() {
+  data () {
     return {
-      initiallyOpen: ["Getting started"],
+      initiallyOpen: ['Getting started'],
       active: [],
       drawer: true,
       files: {
-        html: "mdi-language-html5",
-        js: "mdi-nodejs",
-        json: "mdi-code-json",
-        md: "mdi-language-markdown",
-        pdf: "mdi-file-pdf",
-        png: "mdi-file-image",
-        txt: "mdi-file-document-outline",
-        xls: "mdi-file-excel"
+        html: 'mdi-language-html5',
+        js: 'mdi-nodejs',
+        json: 'mdi-code-json',
+        md: 'mdi-language-markdown',
+        pdf: 'mdi-file-pdf',
+        png: 'mdi-file-image',
+        txt: 'mdi-file-document-outline',
+        xls: 'mdi-file-excel'
       },
       tree: [],
       items: [
         {
-          name: "Getting started",
+          name: 'Getting started',
           children: [
             {
-              name: "Introduction",
-              file: "",
-              to: "/"
+              name: 'Introduction',
+              file: '',
+              to: '/'
             },
             {
-              name: "License",
-              file: "",
-              to: "/license"
+              name: 'License',
+              file: '',
+              to: '/license'
             },
             {
-              name: "Quick start",
-              file: "",
-              to: "/quickStart"
+              name: 'Quick start',
+              file: '',
+              to: '/quickStart'
             },
             {
-              name: "Change log",
-              file: "",
-              to: "/changeLog"
+              name: 'Change log',
+              file: '',
+              to: '/changeLog'
             },
             {
-              name: "Support",
-              file: "",
-              to: "/support"
+              name: 'Support',
+              file: '',
+              to: '/support'
             }
           ]
         },
         {
-          name: "Options",
+          name: 'Options',
           children: [
             {
-              name: "Basics",
-              file: "",
-              to: "/basics"
+              name: 'Basics',
+              file: '',
+              to: '/basics'
             },
             {
-              name: "Calendar",
-              file: "",
-              to: "/calendar"
+              name: 'Calendar',
+              file: '',
+              to: '/calendar'
             },
             {
-              name: "Month",
-              file: "",
-              to: "/month"
-            },
-            
-            {
-              name: "Event",
-              file: "",
-              to: "/event"
+              name: 'Month',
+              file: '',
+              to: '/month'
             },
             {
-              name: "Disabled days",
-              file: "",
-              to: "/disabledDays"
+              name: 'Event',
+              file: '',
+              to: '/event'
             },
             {
-              name: "Enabled days",
-              file: "",
-              to: "/enabledDays"
+              name: 'Disabled days',
+              file: '',
+              to: '/disabledDays'
             },
             {
-              name: "Colorized days",
-              file: "",
-              to: "/colorizedDays"
+              name: 'Enabled days',
+              file: '',
+              to: '/enabledDays'
+            },
+            {
+              name: 'Colorized days',
+              file: '',
+              to: '/colorizedDays'
             }
           ]
         },
         {
-          name: "Style",
-          children:[
-          {
-            name:"Day",
-            file :"",
-            to:"/day"
+          name: 'Style',
+          children: [
+            {
+              name: 'Day',
+              file: '',
+              to: '/day'
             },
             {
-            name:"Event",
-            file :"",
-            to:"/styleEvent"
+              name: 'Event',
+              file: '',
+              to: '/styleEvent'
             },
             {
-            name:"Header",
-            file :"",
-            to:"/header"
-            },
-
+              name: 'Header',
+              file: '',
+              to: '/header'
+            }
           ]
         },
         {
-          name: "Contributing",
+          name: 'Contributing',
           children: [
             {
-              name: "Architecture",
-              file: "",
-              to: "/architecture"
+              name: 'Architecture',
+              file: '',
+              to: '/architecture'
             },
             {
-              name: "Calendar type",
-              file: "",
-              to: "/calendarType"
+              name: 'Calendar type',
+              file: '',
+              to: '/calendarType'
             },
             {
-              name: "Language",
-              file: "",
-              to: "/language"
+              name: 'Language',
+              file: '',
+              to: '/language'
             }
           ]
         }
       ]
-    };
+    }
   },
   methods: {
-    changePage(title) {
-      this.initiallyOpen = [title];
+    changePage (title) {
+      this.initiallyOpen = [title]
     }
   }
-};
+}
 </script>
 
 <style scoped>
@@ -182,7 +180,7 @@ a {
 }
 
 .routerLink {
-  color: rgba(0,0,0,.54);
+  color: rgba(0, 0, 0, 0.54);
   font-weight: 500;
 }
 </style>
