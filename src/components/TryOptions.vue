@@ -118,20 +118,19 @@ export default {
     scrollDest: {
       type: String,
       default: () => {
-        return {}
+        return ''
       }
     },
-
     code: {
       type: String,
       default: () => {
-        return {}
+        return ''
       }
     },
     codeBox: {
       type: Boolean,
       default: () => {
-        return {}
+        return true
       }
     }
   },
