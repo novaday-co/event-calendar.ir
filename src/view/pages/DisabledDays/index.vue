@@ -5,9 +5,9 @@
     </h1>
 
     <try-option
-      :title="title1"
-      :description="description1"
-      :code="code"
+      :title="disabledDayTitle"
+      :description="disabledDayDescription"
+      :code="disabledDayCode"
       :codeBox="true"
       type="none"
     />
@@ -23,9 +23,9 @@ export default {
   },
   data () {
     return {
-      description1: 'Declares days that cant be used',
-      title1: { name: 'disabled days', description: 'List <EventDateTime>' },
-      code: `EventCalendar(
+      disabledDayDescription: 'Declares days that cant be used',
+      disabledDayTitle: { name: 'disabled days', description: 'List <EventDateTime>' },
+      disabledDayCode: `EventCalendar(
   calendarType: CalendarType.GREGORIAN,
   disabledDays: [
     EventDateTime(year: 2021, month: 10, day: 12),

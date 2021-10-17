@@ -5,27 +5,23 @@
     </h1>
 
     <try-option
-      :title="title"
-      :description="description"
+      :title="basicTitle"
+      :description="basicDescription"
       :images="images"
       :array="array"
-      :scrollDescription="scrollDescription"
-      :scrollDest="scrollDest"
       :code="code"
       :codeBox="true"
     />
     <try-option
-      :title="title1"
-      :description="description1"
-      :scrollDescription="scrollDescription1"
-      :scrollDest="scrollDest1"
+      :title="eventTitle"
+      :description="eventDescription"
       type="none"
       id="events"
     />
 
     <try-option
-      :title="title2"
-      :description="description2"
+      :title="middleWidgetTitle"
+      :description="middleWidgetDescription"
       type="none"
       id="middleWidget"
     />
@@ -41,22 +37,18 @@ export default {
   },
   data () {
     return {
-      title: { name: 'calendar type' },
-      title1: { name: 'events', description: 'List <Event>' },
-      title2: { name: 'middleWidget', description: 'Widget' },
+      basicTitle: { name: 'calendar type' },
+      eventTitle: { name: 'events', description: 'List <Event>' },
+      middleWidgetTitle: { name: 'middleWidget', description: 'Widget' },
       array: [{ name: 'Jalali' }, { name: 'Gregorian' }],
-      description:
+      basicDescription:
         'Type of the calendar can be changed between <b>Jalali</b> and<b> Gregorian </b>:',
-      description1: 'Declares days which can has events',
-      description2: 'Declares a widget between calendar & events',
+      eventDescription: 'Declares days which can has events',
+      middleWidgetDescription: 'Declares a widget between calendar & events',
       images: [
         'src/assets/images/screenshout1.jpg',
         'src/assets/images/screenshout2.jpg'
       ],
-      scrollDescription: 'Scroll to events',
-      scrollDescription1: 'Scroll to middleWidget',
-      scrollDest: 'events',
-      scrollDest1: 'middleWidget',
       code: `EventCalendar(calendarType: CalendarType.GREGORIAN,)`
     }
   }
@@ -67,34 +59,4 @@ export default {
 .Home {
   padding: 50px;
 }
-/* .calendar_image-width {
-  float: right;
-} */
-
-/* h1 {
-  padding-left: 30px;
-} */
-
-/* .colContainer {
-  display: flex;
-  flex-direction: column;
-}
-
-img {
-  height: auto;
-  width: 280px;
-  object-fit: scale-down;
-}
-
-.radioButton {
-  display: inline-block;
-}
-
-.v-application p {
-  margin-bottom: 30px !important;
-}
-
-.paragraph {
-  margin: 30px 0px 40px 10px;
-} */
 </style>

@@ -5,101 +5,86 @@
     </h1>
 
     <try-option
-      :title="title1"
+      :title="emptyTitle"
       :description="none"
-      :images="images1"
-      :array="fields1"
-      :scrollDescription="scrollDescription1"
+      :images="imageArray"
+      :array="statusFields"
       type="radio"
-      :scrollDest="scrollDest1"
-      :code="code"
+      :code="emptyCode"
       :codeBox="true"
     />
 
     <try-option
-      :title="title2"
-      :description="description2"
-      :images="images1"
-      :array="fields2"
-      :scrollDescription="scrollDescription2"
+      :title="emptyTextTitle"
+      :description="emptyTextDescription"
+      :images="imageArray"
+      :array="colorFields"
       type="radio"
-      :scrollDest="scrollDest2"
-      :code="code1"
+      :code="emptyTextCode"
       :codeBox="true"
       id="emptyTextColor"
     />
 
     <try-option
-      :title="title3"
-      :description="none"
-      :images="images1"
-      :array="fields3"
-      :scrollDescription="scrollDescription3"
+      :title="emptyIconTitle"
+      :images="imageArray"
+      :array="buttonFields"
       type="radio"
-      :scrollDest="scrollDest3"
-      :code="code2"
+      :code="emptyIconCode"
       :codeBox="true"
       id="emptyIcon"
     />
 
     <try-option
-      :title="title4"
-      :description="description4"
-      :images="images1"
-      :array="fields2"
-      :scrollDescription="scrollDescription4"
+      :title="emptyIconColorTitle"
+      :description="emptyIconColorDescription"
+      :images="imageArray"
+      :array="colorFields"
       type="radio"
-      :scrollDest="scrollDest4"
-      :code="code3"
+      :code="emptyIconColorCode"
       :codeBox="true"
       id="emptyIconColor"
     />
 
     <try-option
-      :title="title5"
-      :description="description5"
-      :images="images1"
-      :array="fields2"
-      :scrollDescription="scrollDescription5"
+      :title="backgroundColorTitle"
+      :description="backgroundColorDescription"
+      :images="imageArray"
+      :array="colorFields"
       type="radio"
-      :scrollDest="scrollDest5"
-      :code="code4"
+      :code="backgroundColorCode"
       :codeBox="true"
       id="backgroundColor"
     />
 
     <try-option
-      :title="title6"
-      :description="description6"
-      :images="images1"
-      :array="fields2"
-      :scrollDescription="scrollDescription6"
+      :title="colorTitle"
+      :description="colorDescription"
+      :images="imageArray"
+      :array="colorFields"
       type="radio"
-      :scrollDest="scrollDest6"
-      :code="code5"
+      :code="colorCode"
       :codeBox="true"
       id="titleColor"
     />
 
     <try-option
-      :title="title7"
-      :description="description7"
-      :images="images1"
-      :array="fields2"
-      :scrollDescription="scrollDescription7"
+      :title="descriptionTitle"
+      :description="descriptionDescription"
+      :images="imageArray"
+      :array="colorFields"
       type="radio"
-      :scrollDest="scrollDest7"
-      :code="code6"
+      :code="descriptionCode"
       :codeBox="true"
       id="descriptionColor"
     />
 
     <try-option
-      :title="title8"
-      :description="description8"
-      :images="images1"
-      :array="fields2"
-      :code="code7"
+      :title="dateTimeTitle"
+      :description="dateTimeDescription"
+      :images="imageArray"
+      :array="colorFields"
+      :code="dateTimeCode"
       :codeBox="true"
       type="radio"
       id="dateTimeColor"
@@ -116,70 +101,56 @@ export default {
   },
   data () {
     return {
-      fields1: [{ name: 'Empty' }, { name: 'Nothing' }],
-      fields2: [{ name: 'Yellow' }, { name: 'Green' }],
-      fields3: [{ name: 'Trash' }, { name: 'Add' }],
-      description8: 'Color of events date time',
-      description7: 'Color of events description',
-      description6: 'Color of events title',
-      description5: 'Color of events background',
-      description4: 'Color of events empty icon',
-      description2: 'Color of events empty text',
-      images1: [
+      statusFields: [{ name: 'Empty' }, { name: 'Nothing' }],
+      colorFields: [{ name: 'Yellow' }, { name: 'Green' }],
+      buttonFields: [{ name: 'Trash' }, { name: 'Add' }],
+      dateTimeDescription: 'Color of events date time',
+      descriptionDescription: 'Color of events description',
+      colorDescription: 'Color of events title',
+      backgroundColorDescription: 'Color of events background',
+      emptyIconColorDescription: 'Color of events empty icon',
+      emptyTextDescription: 'Color of events empty text',
+      imageArray: [
         'src/assets/images/screenshout1.jpg',
         'src/assets/images/screenshout2.jpg'
       ],
-      title1: { name: 'empty text', description: 'String' },
-      title2: { name: 'empty text color', description: 'Color' },
-      title3: { name: 'empty icon', description: 'IconData' },
-      title4: { name: 'empty icon color', description: 'Color' },
-      title5: { name: 'background color', description: 'Color' },
-      title6: { name: 'title color', description: 'Color' },
-      title7: { name: 'description color', description: 'Color' },
-      title8: { name: 'date time color', description: 'Color' },
-      scrollDescription1: 'Scroll to empty text color',
-      scrollDescription2: 'Scroll to empty icon',
-      scrollDescription3: 'Scroll to empty icon color',
-      scrollDescription4: 'Scroll to background color',
-      scrollDescription5: 'Scroll to title color',
-      scrollDescription6: 'Scroll to description color',
-      scrollDescription7: 'Scroll to date time color',
-      scrollDest1: 'emptyTextColor',
-      scrollDest2: 'emptyIcon',
-      scrollDest3: 'emptyIconColor',
-      scrollDest4: 'backgroundColor',
-      scrollDest5: 'titleColor',
-      scrollDest6: 'descriptionColor',
-      scrollDest7: 'dateTimeColor',
-      code: `EventCalendar(
+      emptyTitle: { name: 'empty text', description: 'String' },
+      emptyTextTitle: { name: 'empty text color', description: 'Color' },
+      emptyIconTitle: { name: 'empty icon', description: 'IconData' },
+      emptyIconColorTitle: { name: 'empty icon color', description: 'Color' },
+      backgroundColorTitle: { name: 'background color', description: 'Color' },
+      colorTitle: { name: 'title color', description: 'Color' },
+      descriptionTitle: { name: 'description color', description: 'Color' },
+      dateTimeTitle: { name: 'date time color', description: 'Color' },
+      emptyCode: `EventCalendar(
   calendarType: CalendarType.GREGORIAN,
   eventStyle: EventStyle(emptyText: ‘Oops! No event's here :(’),
 )`,
-      code1: `EventCalendar(
+      emptyTextCode: `EventCalendar(
   calendarType: CalendarType.GREGORIAN,
   eventStyle: EventStyle(emptyTextColor: Colors.red),
 )`,
-      code2: `EventCalendar(
+      emptyIconCode: `EventCalendar(
   calendarType: CalendarType.GREGORIAN,
   eventStyle: EventStyle(emptyIcon: Icons.reorder),
 )`,
-      code3: `EventCalendar(
+      emptyIconColorCode: `EventCalendar(
   calendarType: CalendarType.GREGORIAN,
   eventStyle: EventStyle(emptyIconColor: Colors.red),
 )`,
-      code4: `EventCalendar(
+      backgroundColorCode: `EventCalendar(
   calendarType: CalendarType.GREGORIAN,
   eventStyle: EventStyle(backgroundColor: Colors.red),
 )`,
-      code5: `EventCalendar(
+      colorCode: `EventCalendar(
   calendarType: CalendarType.GREGORIAN,
   eventStyle: EventStyle(titleColor: Colors.red),
 )`,
-      code6: `EventCalendar(
+      descriptionCode: `EventCalendar(
   calendarType: CalendarType.GREGORIAN,
   eventStyle: EventStyle(descriptionColor: Colors.red),
 )`,
-      code7: `EventCalendar(
+      dateTimeCode: `EventCalendar(
   calendarType: CalendarType.GREGORIAN,
   eventStyle: EventStyle(dateTimeColor: Colors.red),
 )`

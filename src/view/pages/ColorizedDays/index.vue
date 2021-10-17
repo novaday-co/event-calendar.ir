@@ -5,9 +5,9 @@
     </h1>
 
     <try-option
-      :title="title1"
-      :description="description1"
-      :code="code"
+      :title="colorizedDayTitle"
+      :description="colorizedDayDescription"
+      :code="colorizedDayCode"
       :codeBox="true"
       type="none"
     />
@@ -23,9 +23,9 @@ export default {
   },
   data () {
     return {
-      description1: 'Declares days that you want to show by different colors',
-      title1: { name: 'colorized days', description: 'List <EventDateTime>' },
-      code: `EventCalendar(
+      colorizedDayDescription: 'Declares days that you want to show by different colors',
+      colorizedDayTitle: { name: 'colorized days', description: 'List <EventDateTime>' },
+      colorizedDayCode: `EventCalendar(
   calendarType: CalendarType.GREGORIAN,
   colorizedDays: [
     EventDateTime(year: 2021, month: 10, day: 12),

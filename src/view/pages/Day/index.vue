@@ -5,97 +5,89 @@
     </h1>
 
     <try-option
-      :title="title1"
+      :title="weekDayTitle"
       :description="description4"
-      :images="images2"
-      :array="fields"
-      :scrollDescription="scrollDescription1"
+      :images="imageArray"
+      :array="colorFields"
       type="radio"
       :scrollDest="scrollDest1"
     />
 
     <try-option
-      :title="title2"
+      :title="weekDayUnselectedTitle"
       :description="description4"
-      :images="images2"
-      :array="fields"
-      :scrollDescription="scrollDescription2"
+      :images="imageArray"
+      :array="colorFields"
       type="radio"
       :scrollDest="scrollDest2"
       id="weekDaySelectedColor"
     />
 
     <try-option
-      :title="title3"
+      :title="backgroundTitle"
       :description="description4"
-      :images="images2"
-      :array="fields"
-      :scrollDescription="scrollDescription3"
+      :images="imageArray"
+      :array="colorFields"
       type="radio"
       :scrollDest="scrollDest3"
       id="weekDayUnSelectedColor"
     />
 
     <try-option
-      :title="title4"
+      :title="selectedBackgroundTitle"
       :description="description4"
-      :images="images2"
-      :array="fields"
-      :scrollDescription="scrollDescription4"
+      :images="imageArray"
+      :array="colorFields"
       type="radio"
       :scrollDest="scrollDest4"
       id="selectedBackgroundColor"
     />
 
     <try-option
-      :title="title5"
+      :title="textColorTitle"
       :description="description4"
-      :images="images2"
-      :array="fields"
-      :scrollDescription="scrollDescription5"
+      :images="imageArray"
+      :array="colorFields"
       type="radio"
       :scrollDest="scrollDest5"
       id="unSelectedBackgroundColor"
     />
 
     <try-option
-      :title="title6"
+      :title="unselectedTextColorTitle"
       :description="description4"
-      :images="images2"
-      :array="fields"
-      :scrollDescription="scrollDescription6"
+      :images="imageArray"
+      :array="colorFields"
       type="radio"
       :scrollDest="scrollDest6"
       id="selectedTextColor"
     />
 
     <try-option
-      :title="title7"
+      :title="eventCounterColorTitle"
       :description="description4"
-      :images="images2"
-      :array="fields"
-      :scrollDescription="scrollDescription7"
+      :images="imageArray"
+      :array="colorFields"
       type="radio"
       :scrollDest="scrollDest7"
       id="unSelectedTextColor"
     />
 
     <try-option
-      :title="title8"
+      :title="eventCounterTextColorTitle"
       :description="description4"
-      :images="images2"
-      :array="fields"
-      :scrollDescription="scrollDescription8"
+      :images="imageArray"
+      :array="colorFields"
       type="radio"
       :scrollDest="scrollDest8"
       id="eventCounterTextColor"
     />
 
     <try-option
-      :title="title9"
+      :title="dayEventCounterTitle"
       :description="description4"
-      :images="images2"
-      :array="fields1"
+      :images="imageArray"
+      :array="labelcolorFields"
       type="radio"
       id="dayEventViewType"
     />
@@ -111,41 +103,24 @@ export default {
   },
   data () {
     return {
-      fields: [{ name: 'Yellow' }, { name: 'Green' }],
-      fields1: [{ name: 'Dot' }, { name: 'Label' }],
-      description2: 'Will allow user to change view type directly in runtime:',
-      images2: [
+      colorFields: [{ name: 'Yellow' }, { name: 'Green' }],
+      labelcolorFields: [{ name: 'Dot' }, { name: 'Label' }],
+      imageArray: [
         'src/assets/images/screenshout1.jpg',
         'src/assets/images/screenshout2.jpg'
       ],
-      title1: { name: 'week day selected color', description: 'Color' },
-      title2: { name: 'week day unselected color', description: 'Color' },
-      title3: { name: 'selected background color', description: 'Color' },
-      title4: { name: 'unselected background color', description: 'Color' },
-      title5: { name: 'selected text color', description: 'Color' },
-      title6: { name: 'unselected text color', description: 'Color' },
-      title7: { name: 'event counter color', description: 'Color' },
-      title8: { name: 'event counter text color', description: 'Color' },
-      title9: {
+      weekDayTitle: { name: 'week day selected color', description: 'Color' },
+      weekDayUnselectedTitle: { name: 'week day unselected color', description: 'Color' },
+      backgroundTitle: { name: 'selected background color', description: 'Color' },
+      selectedBackgroundTitle: { name: 'unselected background color', description: 'Color' },
+      textColorTitle: { name: 'selected text color', description: 'Color' },
+      unselectedTextColorTitle: { name: 'unselected text color', description: 'Color' },
+      eventCounterColorTitle: { name: 'event counter color', description: 'Color' },
+      eventCounterTextColorTitle: { name: 'event counter text color', description: 'Color' },
+      dayEventCounterTitle: {
         name: 'day event counter view type',
         description: 'DayEventCounterViewType'
-      },
-      scrollDescription1: 'Scroll to weekday selected color',
-      scrollDescription2: 'Scroll to weekday unselected color',
-      scrollDescription3: 'Scroll to selected background color',
-      scrollDescription4: 'Scroll to unselected background color',
-      scrollDescription5: 'Scroll to selected text color',
-      scrollDescription6: 'Scroll to unselected text color',
-      scrollDescription7: 'Scroll to event counter text color',
-      scrollDescription8: 'Scroll to day event view type',
-      scrollDest1: 'weekDaySelectedColor',
-      scrollDest2: 'weekDayUnSelectedColor',
-      scrollDest3: 'selectedBackgroundColor',
-      scrollDest4: 'unSelectedBackgroundColor',
-      scrollDest5: 'selectedTextColor',
-      scrollDest6: 'unSelectedTextColor',
-      scrollDest7: 'eventCounterTextColor',
-      scrollDest8: 'dayEventViewType'
+      }
     }
   }
 }
