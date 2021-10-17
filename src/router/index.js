@@ -13,9 +13,6 @@ import Calendar from '@/view/pages/Calendar/route'
 import Month from '@/view/pages/Month/route'
 import Day from '@/view/pages/day/route'
 import Event from '@/view/pages/event/route'
-import DisabledDays from '@/view/pages/disabledDays/route'
-import EnabledDays from '@/view/pages/EnabledDays/route'
-import ColorizedDays from '@/view/pages/ColorizedDays/route'
 import CalendarType from '@/view/pages/CalendarType/route'
 import Language from '@/view/pages/Language/route'
 import Header from '@/view/pages/Header/route'
@@ -37,9 +34,6 @@ const router = new Router({
     Month,
     Day,
     Event,
-    DisabledDays,
-    EnabledDays,
-    ColorizedDays,
     Language,
     Header,
     styleEvent

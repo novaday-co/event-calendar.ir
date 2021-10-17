@@ -12,14 +12,19 @@
     </v-row>
     <v-divider></v-divider>
     <v-row class="justify-space-around">
+
+
+
       <v-col cols="12" md="6">
         <p class="paragraph" v-html="description" />
         <v-row class="align-items-center">
-          <v-col cols="2" v-if="type !== 'none'">
+          <v-col cols="12" v-if="type !== 'none'">
             <p>Try it now:</p>
           </v-col>
 
-          <v-col cols="8" v-if="type === 'radio'">
+
+
+          <v-col cols="12" v-if="type === 'radio'">
             <v-radio-group v-model="radioGroup" class="radioButton mt-0" row>
               <v-radio
                 v-for="item in array"
@@ -29,6 +34,14 @@
             </v-radio-group>
           </v-col>
 
+          <vue-code-highlight
+          v-if="codeBox === true"
+          language="dart"
+          class="codeDiv"
+        >
+          <pre class="mb-0 py-2" v-html="code"></pre>
+        </vue-code-highlight>
+
           <v-col v-else-if="type === 'switch'">
             <v-container class="px-0 switch" fluid>
               <v-switch v-model="switchButton"></v-switch>
@@ -36,15 +49,7 @@
           </v-col>
         </v-row>
       </v-col>
-      <v-col cols="12" md="2">
-        <vue-code-highlight
-          v-if="codeBox === true"
-          language="dart"
-          class="codeDiv"
-        >
-          <pre class="mb-0 py-2" v-html="code"></pre>
-        </vue-code-highlight>
-      </v-col>
+
       <v-col cols="12" md="4">
         <v-container class="imageContainer">
           <template v-for="(img, index) in images">
@@ -65,6 +70,7 @@
           </template>
         </v-container>
       </v-col>
+
     </v-row>
   </div>
 </template>
@@ -161,6 +167,8 @@ h1 {
   position: absolute;
   right: 60px;
   margin-bottom: -19px;
+  font-size: 0.75rem;
+  opacity: 0.7;
 }
 
 .colContainer {
@@ -177,6 +185,7 @@ h1 {
   width: fit-content;
   float: right;
   align-items: flex-start;
+  width: 800px!important;
 }
 
 img {

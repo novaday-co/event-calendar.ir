@@ -105,21 +105,6 @@ export default {
               name: 'Event',
               file: '',
               to: '/event'
-            },
-            {
-              name: 'Disabled days',
-              file: '',
-              to: '/disabledDays'
-            },
-            {
-              name: 'Enabled days',
-              file: '',
-              to: '/enabledDays'
-            },
-            {
-              name: 'Colorized days',
-              file: '',
-              to: '/colorizedDays'
             }
           ]
         },

@@ -12,6 +12,7 @@
       :code="code"
       :codeBox="true"
     />
+
     <try-option
       :title="eventTitle"
       :description="eventDescription"
