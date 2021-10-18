@@ -25,6 +25,8 @@
       :description="middleWidgetDescription"
       type="none"
       id="middleWidget"
+      :code="middleWidgetCode"
+      :codeBox="true"
     />
   </div>
 </template>
@@ -50,7 +52,25 @@ export default {
         'src/assets/images/screenshout1.jpg',
         'src/assets/images/screenshout2.jpg'
       ],
-      code: `EventCalendar(calendarType: CalendarType.GREGORIAN,)`
+      code: `EventCalendar(calendarType: CalendarType.GREGORIAN,)`,
+      middleWidgetCode: `EventCalendar(
+        calendarType: CalendarType.GREGORIAN,
+        middleWidget: (dateTime) => Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Expanded(
+              child: Container(
+                padding: EdgeInsets.all(8),
+                child: Text(
+                  "\${dateTime}",
+                  textAlign: TextAlign.center,
+                ),
+                color: Colors.red,
+              ),
+            ),
+          ],
+        ),
+      ),`
     }
   }
 }
